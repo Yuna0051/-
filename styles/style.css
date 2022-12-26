@@ -1,0 +1,152 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&display=swap"); /******************************************************************
+
+Stylesheet: ベーススタイル
+
+******************************************************************/
+body {
+  margin: 0;
+}
+
+header {
+  height: 85px;
+  width: 100%;
+  background-color: #ffffff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+}
+header img {
+  height: 30px;
+  width: auto;
+}
+header a {
+  text-decoration: none;
+  color: #ffffff;
+  border-radius: 19px;
+  background-color: #ff8a00;
+  padding: 10px 27px;
+}
+
+#fv {
+  background-image: url(/images/fv-sp.png);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 390px;
+}
+#fv h1 {
+  color: #ff8a00;
+  font-size: 30px;
+  margin: 0;
+  padding-top: 30px;
+}
+#fv div ul {
+  list-style: none;
+}
+#fv div ul li {
+  width: 110px;
+  float: left;
+  margin-right: 24px;
+}
+#fv div ul li img {
+  width: 100%;
+  height: 110px;
+}
+#fv div ul li p {
+  font-size: 16px;
+  text-align: center;
+  margin: 0;
+  font-weight: bold;
+}
+
+.main_title {
+  font-size: 32px;
+  text-align: center;
+  font-weight: bold;
+  margin: 0;
+}
+
+.sub_title {
+  font-size: 14px;
+  text-align: center;
+  margin: 0;
+}
+
+.service_items {
+  display: flex;
+  justify-content: space-around;
+}
+.service_item {
+  width: 24%;
+  text-align: center;
+}
+.service_item a {
+  text-decoration: none;
+  color: #ffffff;
+  background-color: #ff8a00;
+  padding: 5px 45px;
+  font-size: 14.4px;
+}
+.service_content {
+  border: 2px solid #35baff;
+}
+.service_content h2 {
+  font-size: 19.2px;
+  color: #ff8a00;
+  font-weight: bold;
+  margin: 0;
+}
+.service_content img {
+  height: 84px;
+  width: auto;
+}
+.service_content p {
+  font-size: 14.4px;
+}
+
+.support_title {
+  background-image: url(/images/sup_back.png);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 155px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.support_title h1 {
+  text-align: center;
+  color: #ffffff;
+}
+
+@media (min-width: 480px) {
+  /******************************************************************
+
+  Stylesheet: 480px以上(スマホの横向き)のモニタで適用
+
+  ******************************************************************/
+}
+@media (min-width: 600px) {
+  /******************************************************************
+
+  Stylesheet: 600px以上のタブレットやモニタで適用
+
+  ******************************************************************/
+}
+@media (min-width: 960px) {
+  /******************************************************************
+
+  Stylesheet: 960px以上のモニタで適用
+
+  ******************************************************************/
+}
+@media (min-width: 1100px) {
+  /******************************************************************
+
+  Stylesheet: 1280px以上のモニタで適用
+
+  ******************************************************************/
+}/*# sourceMappingURL=style.css.map */

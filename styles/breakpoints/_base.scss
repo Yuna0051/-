@@ -1,0 +1,136 @@
+/******************************************************************
+
+Stylesheet: ベーススタイル
+
+******************************************************************/
+body{
+	margin: 0;
+}
+header{
+	height: 85px;
+	width: 100%;
+	background-color: #ffffff;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 0 20px;
+
+	img{
+		height: 30px;
+		width: auto;
+	}
+	a{
+		text-decoration: none;
+		color: #ffffff;
+		border-radius: 19px;
+		background-color: #ff8a00;
+		padding: 10px 27px;
+	}
+}
+
+#fv{
+	background-image: url(/images/fv-sp.png);
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	height: 390px;
+
+	h1{
+		color: #ff8a00;
+		font-size: 30px;
+		margin: 0;
+		padding-top: 30px;
+	}
+	div{
+		ul{
+			list-style: none;
+			
+			li{
+				width: 110px;
+				float: left;
+				margin-right: 24px;
+
+				img{
+					width: 100%;
+					height: 110px;
+				}
+				p{
+					font-size: 16px;
+					text-align: center;
+					margin: 0;
+					font-weight: bold;
+				}
+			}
+			
+		}
+	}
+}
+
+.main_title{
+	font-size: 32px;
+	text-align: center;
+	font-weight: bold;
+	margin: 0;
+}
+.sub_title{
+	font-size: 14px;
+	text-align: center;
+	margin: 0;
+}
+
+#service{
+
+}
+.service{
+	&_items{
+		display: flex;
+		justify-content: space-around;
+	}
+	&_item{
+		width: 24%;
+		text-align: center;
+
+		a{
+			text-decoration: none;
+			color: #ffffff;
+			background-color: #ff8a00;
+			padding: 5px 45px;
+			font-size: 14.4px;
+		}
+	}
+	&_content{
+		border :2px solid #35baff;
+		
+		h2{
+			font-size: 19.2px;
+			color: #ff8a00;
+			font-weight: bold;
+			margin: 0;
+		}
+		img{
+			height: 84px;
+			width: auto;
+		}	
+		p{
+			font-size: 14.4px;
+		}
+	}
+}
+.support{
+	&_title{
+		background-image: url(/images/sup_back.png);
+		background-position: center center;
+		background-repeat: no-repeat;
+		background-size: cover;
+		height: 155px;
+		width: 100%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+
+		h1{
+			text-align: center;
+			color: #ffffff;	
+		}
+	}
+}
