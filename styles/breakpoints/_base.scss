@@ -23,12 +23,11 @@ header{
 	height: 60px;
     width: 100%;
     margin: 0 auto;
-    max-width: 770px;
 	background-color: #ffffff;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	padding: 0 15px;
+	padding: 0 10px;
 
 	img{
 		height: 28px;
@@ -50,11 +49,10 @@ header{
 	background-repeat: no-repeat;
 	background-size: cover;
 	height: 52vw;
-	padding: 0 15px;
+	padding: 0 10px;
 }
 .fv-inner{
     width: 100%;
-    max-width: 770px;
     margin: 0 auto;
     height: 100%;
 	
@@ -62,7 +60,7 @@ header{
 		color: #ff8a00;
 		font-size: 18px;
 		margin: 0 0 0 12px;
-		padding-top: 36px;
+		padding-top: 4.8vw;
         line-height: 1.0;
         letter-spacing: 2px;
         position: relative;
@@ -70,7 +68,7 @@ header{
         &::after{
             content: "";
             position: absolute;
-            bottom: -12px;
+            bottom: -8px;
             left: 0;
             background-color: #ebbd87;
             height: 2px;
@@ -79,7 +77,7 @@ header{
 	}
 
 	div{
-        margin: 12vw 0 0;
+        margin: 16vw 0 0;
 		ul{
 			list-style: none;
 			padding: 0;
@@ -123,30 +121,28 @@ header{
         transform: translateX(-50%);
         background-color: #ebbd87;
         height: 2px;
-        width: 76px;
+        width: 10vw;
     }
 }
 .sub_title{
-	font-size: 14px;
+	font-size: 12px;
 	font-weight: normal;
 	text-align: center;
-	letter-spacing: 3px;
+	letter-spacing: 2.5px;
 	margin: 0 0 6.6vw;
     line-height: 1.0;
 }
 
 #service{
 	width: 100%;
-    max-width: 770px;
     margin: 0 auto;
-    padding: 0 13px;
+    padding: 0 10px;
 
     .main_title{
         margin: 9.3vw 0 4vw;
     }
 }
 .service{
-    
 	&_items{
 		display: flex;
 		justify-content: space-around;
@@ -157,7 +153,7 @@ header{
 		text-align: center;
 
         &:nth-child(1),&:nth-child(2){
-            margin-bottom: 6vw;
+            margin-bottom: 4vw;
         }
 
 		a{
@@ -184,8 +180,8 @@ header{
 	}
 	&_content{
 		border: 3px solid #169ee5;
-        width: 90%;
-		height: 300px;
+        width: 95%;
+		height: 290px;
 		margin: 0 auto 20px;
 		padding: 4vw 10px 0;
 		
@@ -214,7 +210,7 @@ header{
 		background-position: center center;
 		background-repeat: no-repeat;
 		background-size: cover;
-		height: 100px;
+		height: 20.6vw;
 		width: 100%;
 		display: flex;
 		justify-content: center;
@@ -239,9 +235,8 @@ header{
 		}
 		div{
             width: 100%;
-            max-width: 770px;
             margin: 0 auto;
-			padding: 30px 35px 0;
+			padding: 4vw 25px 0;
 
 			h2{
 				margin: 0;
@@ -257,7 +252,7 @@ header{
 				font-size: 22px;
                 letter-spacing: 2px;
                 line-height: 1.0;
-                margin: 20px 0 30px;
+                margin: 2.6vw 0 4vw;
 
                 span{
                     font-size: 16px;
@@ -270,28 +265,25 @@ header{
 	}
 	&_merit{
         width: 100%;
-        max-width: 770px;
         margin: 0 auto;
-		padding: 0 20px;		
+		padding: 0 15px;		
 	}
     &_content{
         width: 100%;
-        max-width: 770px;
         margin: 0 auto;
-        padding: 0 20px;
+        padding: 0 15px;
     }
     &_flow{
         width: 100%;
-        max-width: 770px;
         margin: 0 auto;
-        padding: 0 20px;
+        padding: 0 15px;
     }
     &_time{
         position: relative;
         background-image: url(/images/sup_back.png);
         width: 100%;
-        height: 150px;
-        margin: 60px 0 130px;
+        height: 20vw;
+        margin: 8vw 0 17.3vw;
     }
 }
 .merit{
@@ -321,7 +313,7 @@ header{
 
 		h2{
 			position: absolute;
-			top: -25px;
+			top: -20px;
 			left: 50%;
 			transform: translateX(-50%);
 			text-align: center;
@@ -330,7 +322,7 @@ header{
 			font-size: 16px;
             line-height: 1.0;
             letter-spacing: 2px;
-            padding: 12px 0;
+            padding: 10px 0;
             width: 145px;
             margin: 0;
             border-radius: 20px;
@@ -342,6 +334,7 @@ header{
             margin: 0;
             font-weight: bold;
             width: 50%;
+            text-align: left;
         }
 
 		img{
@@ -358,7 +351,7 @@ header{
         display: flex;
         justify-content: space-around;
         flex-wrap: wrap;
-        padding: 40px 0;
+        padding: 8vw 0;
         background-color: #ffffff;
     }
     &_item{
@@ -366,23 +359,22 @@ header{
         text-align: center;
         
         &:nth-child(4),&:nth-child(5),&:nth-child(6){
-            margin-top: 30px;
+            margin-top: 4vw;
         }
 
         img{
             width: auto;
-            height: 60px;
+            height: 16vw;
         }
         p{
             font-size: 14px;
             line-height: 1.2;
-            margin: 20px 0 0;
+            margin: 5vw 0 0;
             font-weight: bold;
         }
     }
     &_inner{
         width: 100%;
-        //height: 240px;
         border: 3px solid #169ee5;
         text-align: center;
         background-color: #ffffff;
@@ -395,14 +387,14 @@ header{
     &_img{
         display: flex;
         justify-content: center;
-        margin: 30px 0 0;
+        margin: 6vw 0 0;
 
         img{
             width: auto;
-            height: 60px;    
+            height: 14.6vw;    
 
             &:nth-child(2){
-                margin: 0 40px;
+                margin: 0 10.6vw;
             }
         }
     }
@@ -410,13 +402,13 @@ header{
 .flow{
     &_items{
 		display: flex;
-		justify-content: space-around;
+		justify-content: space-between;
         align-items: center;
 
         span{
             color: #ff8a00;
             font-weight: 900;
-            padding-bottom: 50px;
+            padding-bottom: 7vw;
         }
 	}
 	&_item{
@@ -452,7 +444,7 @@ header{
         p{
             font-size: 14px;
             padding: 0;
-            margin: 16px 0 0;
+            margin: 2.4vw 0 0;
             line-height: 1.2;
             font-weight: bold;
         }
@@ -469,7 +461,7 @@ header{
         text-align: center;
         background-color: #ffffff;
         position: absolute;
-        top: 45px;
+        top: 6vw;
         left: 50%;
         transform: translateX(-50%);
         box-shadow: 0px 0px 5px #333;
@@ -478,7 +470,7 @@ header{
         h2{
             font-size: 18px;
             font-weight: bold;
-            margin:  0 0 30px;
+            margin:  0 0 4vw;
             line-height: 1.0;
             letter-spacing: 2px;
             position: relative;
@@ -486,12 +478,12 @@ header{
             &::after{
                 content: "";
                 position: absolute;
-                bottom: -15px;
+                bottom: -2vw;
                 left: 50%;
                 transform: translateX(-50%);
                 background-color: #ebbd87;
                 height: 2px;
-                width: 76px;
+                width: 10vw;
             }          
         }    
         p{
@@ -505,7 +497,7 @@ header{
                 content: '\f095';
                 position: absolute;
                 top: 50%;
-                left: 20px;
+                left: 6vw;
                 transform: translate(100%, -50%);
                 font-weight: 900;
                 color: #ff8a00;
