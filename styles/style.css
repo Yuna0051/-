@@ -4,6 +4,473 @@
 Stylesheet: ベーススタイル
 
 ******************************************************************/
+* {
+  box-sizing: border-box;
+  font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
+}
+
+#support01, #support03 {
+  background-color: #fdfaf3;
+}
+
+body {
+  margin: 0;
+}
+
+header {
+  height: 60px;
+  width: 100%;
+  margin: 0 auto;
+  max-width: 770px;
+  background-color: #ffffff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 15px;
+}
+header img {
+  height: 28px;
+  width: auto;
+}
+header a {
+  text-decoration: none;
+  color: #ffffff;
+  border-radius: 30px;
+  background-color: #ff8a00;
+  padding: 8px 25px;
+  font-size: 14px;
+}
+
+#fv {
+  background-image: url(/images/fv-sp.png);
+  background-position: center right;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 52vw;
+  padding: 0 15px;
+}
+
+.fv-inner {
+  width: 100%;
+  max-width: 770px;
+  margin: 0 auto;
+  height: 100%;
+}
+.fv-inner h1 {
+  color: #ff8a00;
+  font-size: 18px;
+  margin: 0 0 0 12px;
+  padding-top: 36px;
+  line-height: 1;
+  letter-spacing: 2px;
+  position: relative;
+}
+.fv-inner h1::after {
+  content: "";
+  position: absolute;
+  bottom: -12px;
+  left: 0;
+  background-color: #ebbd87;
+  height: 2px;
+  width: 310px;
+}
+.fv-inner div {
+  margin: 12vw 0 0;
+}
+.fv-inner div ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.fv-inner div ul li {
+  float: left;
+  margin-right: 2vw;
+  text-align: center;
+}
+.fv-inner div ul li img {
+  width: 14.6vw;
+  height: 14.6vw;
+}
+.fv-inner div ul li p {
+  font-size: 12px;
+  text-align: center;
+  margin: 0;
+  font-weight: bold;
+  line-height: 1.25;
+}
+
+.main_title {
+  font-size: 22px;
+  text-align: center;
+  font-weight: bold;
+  margin: 13.3vw 0 4vw;
+  line-height: 1;
+  letter-spacing: 2px;
+  position: relative;
+}
+.main_title::after {
+  content: "";
+  position: absolute;
+  bottom: -2vw;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #ebbd87;
+  height: 2px;
+  width: 76px;
+}
+
+.sub_title {
+  font-size: 14px;
+  font-weight: normal;
+  text-align: center;
+  letter-spacing: 3px;
+  margin: 0 0 6.6vw;
+  line-height: 1;
+}
+
+#service {
+  width: 100%;
+  max-width: 770px;
+  margin: 0 auto;
+  padding: 0 13px;
+}
+#service .main_title {
+  margin: 9.3vw 0 4vw;
+}
+
+.service_items {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+.service_item {
+  width: 50%;
+  text-align: center;
+}
+.service_item:nth-child(1), .service_item:nth-child(2) {
+  margin-bottom: 6vw;
+}
+.service_item a {
+  text-decoration: none;
+  color: #ffffff;
+  border: 3px solid #ebbd87;
+  border-radius: 5px;
+  background-color: #ff8a00;
+  padding: 5px 8vw;
+  font-size: 14px;
+  position: relative;
+}
+.service_item a::after {
+  font-family: "Font Awesome 5 Free";
+  content: "\f078";
+  position: absolute;
+  top: 50%;
+  right: 5vw;
+  transform: translate(100%, -50%);
+  font-weight: 900;
+  color: #ffffff;
+}
+.service_content {
+  border: 3px solid #169ee5;
+  width: 90%;
+  height: 300px;
+  margin: 0 auto 20px;
+  padding: 4vw 10px 0;
+}
+.service_content h2 {
+  font-size: 16px;
+  color: #ff8a00;
+  font-weight: bold;
+  margin: 0 0 4vw;
+  line-height: 1.2;
+  letter-spacing: 2px;
+}
+.service_content img {
+  height: 70px;
+  width: auto;
+}
+.service_content p {
+  font-size: 14px;
+  font-weight: bold;
+  margin-top: 4vw;
+}
+
+.support_title {
+  background-image: url(/images/sup_back.png);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 11vw 0 4.6vw;
+}
+.support_title h1 {
+  text-align: center;
+  color: #ffffff;
+  font-size: 22px;
+  letter-spacing: 2px;
+}
+.support_img {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.support_img img {
+  width: 85vw;
+  height: auto;
+}
+.support_img div {
+  width: 100%;
+  max-width: 770px;
+  margin: 0 auto;
+  padding: 30px 35px 0;
+}
+.support_img div h2 {
+  margin: 0;
+  color: #169ee5;
+  font-size: 18px;
+  line-height: 1.3;
+}
+.support_img div h3 {
+  text-align: center;
+  color: #ffffff;
+  background-color: #ff8a00;
+  padding: 15px 0;
+  font-size: 22px;
+  letter-spacing: 2px;
+  line-height: 1;
+  margin: 20px 0 30px;
+}
+.support_img div h3 span {
+  font-size: 16px;
+}
+.support_img div p {
+  font-size: 16px;
+}
+.support_merit {
+  width: 100%;
+  max-width: 770px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+.support_content {
+  width: 100%;
+  max-width: 770px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+.support_flow {
+  width: 100%;
+  max-width: 770px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+.support_time {
+  position: relative;
+  background-image: url(/images/sup_back.png);
+  width: 100%;
+  height: 150px;
+  margin: 60px 0 130px;
+}
+
+.merit-items {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+.merit-item {
+  border: 3px solid #169ee5;
+  background-color: #ffffff;
+  width: 100%;
+  position: relative;
+  text-align: center;
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  padding: 30px 15px;
+  justify-content: space-between;
+}
+.merit-item:nth-child(1), .merit-item:nth-child(2) {
+  margin: 0 0 40px;
+}
+.merit-item h2 {
+  position: absolute;
+  top: -25px;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  color: #ffffff;
+  background-color: #ff8a00;
+  font-size: 16px;
+  line-height: 1;
+  letter-spacing: 2px;
+  padding: 12px 0;
+  width: 145px;
+  margin: 0;
+  border-radius: 20px;
+}
+.merit-item p {
+  font-size: 14px;
+  padding: 0;
+  margin: 0;
+  font-weight: bold;
+  width: 50%;
+}
+.merit-item img {
+  width: 45%;
+  height: auto;
+}
+
+.sup_items {
+  width: 100%;
+  border: 3px solid #169ee5;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  padding: 40px 0;
+  background-color: #ffffff;
+}
+.sup_item {
+  width: 33.3%;
+  text-align: center;
+}
+.sup_item:nth-child(4), .sup_item:nth-child(5), .sup_item:nth-child(6) {
+  margin-top: 30px;
+}
+.sup_item img {
+  width: auto;
+  height: 60px;
+}
+.sup_item p {
+  font-size: 14px;
+  line-height: 1.2;
+  margin: 20px 0 0;
+  font-weight: bold;
+}
+.sup_inner {
+  width: 100%;
+  border: 3px solid #169ee5;
+  text-align: center;
+  background-color: #ffffff;
+}
+.sup_inner p {
+  font-weight: bold;
+  font-size: 14px;
+}
+.sup_img {
+  display: flex;
+  justify-content: center;
+  margin: 30px 0 0;
+}
+.sup_img img {
+  width: auto;
+  height: 60px;
+}
+.sup_img img:nth-child(2) {
+  margin: 0 40px;
+}
+
+.flow_items {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.flow_items span {
+  color: #ff8a00;
+  font-weight: 900;
+  padding-bottom: 50px;
+}
+.flow_item {
+  width: 30%;
+  text-align: center;
+  position: relative;
+}
+.flow_item::after {
+  position: absolute;
+  top: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 16px;
+  font-weight: bold;
+  width: 30px;
+  height: 30px;
+  color: #ffffff;
+  background-color: #ff8a00;
+  border: 3px solid #ebbd87;
+  line-height: 30px;
+  border-radius: 50%;
+}
+.flow_item:nth-child(1)::after {
+  content: "1";
+}
+.flow_item:nth-child(3)::after {
+  content: "2";
+}
+.flow_item:nth-child(5)::after {
+  content: "3";
+}
+.flow_item p {
+  font-size: 14px;
+  padding: 0;
+  margin: 16px 0 0;
+  line-height: 1.2;
+  font-weight: bold;
+}
+.flow_item img {
+  width: 90%;
+  height: auto;
+}
+
+.time_content {
+  width: 80%;
+  margin: 0 auto;
+  text-align: center;
+  background-color: #ffffff;
+  position: absolute;
+  top: 45px;
+  left: 50%;
+  transform: translateX(-50%);
+  box-shadow: 0px 0px 5px #333;
+  padding: 30px 0;
+}
+.time_content h2 {
+  font-size: 18px;
+  font-weight: bold;
+  margin: 0 0 30px;
+  line-height: 1;
+  letter-spacing: 2px;
+  position: relative;
+}
+.time_content h2::after {
+  content: "";
+  position: absolute;
+  bottom: -15px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #ebbd87;
+  height: 2px;
+  width: 76px;
+}
+.time_content p {
+  font-size: 16px;
+  font-weight: bold;
+  margin: 0;
+  position: relative;
+}
+.time_content p::before {
+  font-family: "Font Awesome 5 Free";
+  content: "\f095";
+  position: absolute;
+  top: 50%;
+  left: 20px;
+  transform: translate(100%, -50%);
+  font-weight: 900;
+  color: #ff8a00;
+}
+
 @media (min-width: 480px) {
   /******************************************************************
 
@@ -30,6 +497,8 @@ Stylesheet: ベーススタイル
   header {
     height: 85px;
     width: 100%;
+    margin: 0 auto;
+    max-width: 770px;
     background-color: #ffffff;
     display: flex;
     justify-content: space-between;
@@ -50,13 +519,19 @@ Stylesheet: ベーススタイル
   }
   #fv {
     background-image: url(/images/fv-sp.png);
-    background-position: center center;
+    background-position: center right;
     background-repeat: no-repeat;
     background-size: cover;
     height: 390px;
     padding: 0 15px;
   }
-  #fv h1 {
+  .fv-inner {
+    width: 100%;
+    max-width: 770px;
+    margin: 0 auto;
+    height: 100%;
+  }
+  .fv-inner h1 {
     color: #ff8a00;
     font-size: 30px;
     margin: 0 0 0 12px;
@@ -65,7 +540,7 @@ Stylesheet: ベーススタイル
     letter-spacing: 2px;
     position: relative;
   }
-  #fv h1::after {
+  .fv-inner h1::after {
     content: "";
     position: absolute;
     bottom: -12px;
@@ -74,23 +549,23 @@ Stylesheet: ベーススタイル
     height: 2px;
     width: 500px;
   }
-  #fv div {
+  .fv-inner div {
     margin: 70px 0 0;
   }
-  #fv div ul {
+  .fv-inner div ul {
     list-style: none;
     padding: 0;
     margin: 0;
   }
-  #fv div ul li {
+  .fv-inner div ul li {
     float: left;
     margin-right: 15px;
   }
-  #fv div ul li img {
+  .fv-inner div ul li img {
     width: 110px;
     height: 110px;
   }
-  #fv div ul li p {
+  .fv-inner div ul li p {
     font-size: 16px;
     text-align: center;
     margin: 0;
@@ -98,7 +573,7 @@ Stylesheet: ベーススタイル
     line-height: 1.25;
   }
   .main_title {
-    font-size: 32px;
+    font-size: 30px;
     text-align: center;
     font-weight: bold;
     margin: 100px 0 30px;
@@ -125,6 +600,9 @@ Stylesheet: ベーススタイル
     line-height: 1;
   }
   #service {
+    width: 100%;
+    max-width: 770px;
+    margin: 0 auto;
     padding: 0 13px;
   }
   #service .main_title {
@@ -149,7 +627,7 @@ Stylesheet: ベーススタイル
     border-radius: 5px;
     background-color: #ff8a00;
     padding: 5px 45px;
-    font-size: 14.4px;
+    font-size: 14px;
     position: relative;
   }
   .service_item a::after {
@@ -170,7 +648,7 @@ Stylesheet: ベーススタイル
     padding: 30px 20px 0;
   }
   .service_content h2 {
-    font-size: 19.2px;
+    font-size: 18px;
     color: #ff8a00;
     font-weight: bold;
     margin: 0 0 30px;
@@ -182,7 +660,7 @@ Stylesheet: ベーススタイル
     width: auto;
   }
   .service_content p {
-    font-size: 14.4px;
+    font-size: 14px;
     font-weight: bold;
     margin-top: 30px;
   }
@@ -201,7 +679,7 @@ Stylesheet: ベーススタイル
   .support_title h1 {
     text-align: center;
     color: #ffffff;
-    font-size: 32px;
+    font-size: 30px;
     letter-spacing: 2px;
   }
   .support_img {
@@ -214,12 +692,15 @@ Stylesheet: ベーススタイル
     height: 427px;
   }
   .support_img div {
+    width: 100%;
+    max-width: 770px;
+    margin: 0 auto;
     padding: 30px 35px 0;
   }
   .support_img div h2 {
     margin: 0;
     color: #169ee5;
-    font-size: 30px;
+    font-size: 26px;
     line-height: 1.3;
   }
   .support_img div h3 {
@@ -236,15 +717,24 @@ Stylesheet: ベーススタイル
     font-size: 20px;
   }
   .support_img div p {
-    font-size: 20px;
+    font-size: 18px;
   }
   .support_merit {
+    width: 100%;
+    max-width: 770px;
+    margin: 0 auto;
     padding: 0 20px;
   }
   .support_content {
+    width: 100%;
+    max-width: 770px;
+    margin: 0 auto;
     padding: 0 20px;
   }
   .support_flow {
+    width: 100%;
+    max-width: 770px;
+    margin: 0 auto;
     padding: 0 20px;
   }
   .support_time {
@@ -274,7 +764,7 @@ Stylesheet: ベーススタイル
     text-align: center;
     color: #ffffff;
     background-color: #ff8a00;
-    font-size: 15px;
+    font-size: 16px;
     line-height: 1;
     letter-spacing: 2px;
     padding: 12px 0;
@@ -283,10 +773,10 @@ Stylesheet: ベーススタイル
     border-radius: 20px;
   }
   .merit-item p {
-    font-size: 15px;
+    font-size: 14px;
     padding: 0 25px;
     margin: 40px 0;
-    line-height: 1.2;
+    font-weight: bold;
   }
   .merit-item img {
     width: 200px;
@@ -317,9 +807,10 @@ Stylesheet: ベーススタイル
     height: 120px;
   }
   .sup_item p {
-    font-size: 18px;
+    font-size: 16px;
     line-height: 1.2;
     margin: 40px 0 0;
+    font-weight: bold;
   }
   .sup_inner {
     width: 100%;
@@ -384,10 +875,11 @@ Stylesheet: ベーススタイル
     content: "3";
   }
   .flow_item p {
-    font-size: 15px;
+    font-size: 16px;
     padding: 0 25px;
     margin: 18px 0 0;
     line-height: 1.2;
+    font-weight: bold;
   }
   .flow_item img {
     width: 100%;
@@ -406,7 +898,7 @@ Stylesheet: ベーススタイル
     box-shadow: 0px 0px 5px #333;
   }
   .time_content h2 {
-    font-size: 22px;
+    font-size: 20px;
     font-weight: bold;
     margin: 40px 0 30px;
     line-height: 1;
@@ -424,7 +916,7 @@ Stylesheet: ベーススタイル
     width: 76px;
   }
   .time_content p {
-    font-size: 22px;
+    font-size: 20px;
     font-weight: bold;
     margin: 0;
     position: relative;
@@ -434,7 +926,7 @@ Stylesheet: ベーススタイル
     content: "\f095";
     position: absolute;
     top: 50%;
-    left: 35px;
+    left: 45px;
     transform: translate(100%, -50%);
     font-weight: 900;
     color: #ff8a00;
@@ -446,6 +938,9 @@ Stylesheet: ベーススタイル
   Stylesheet: 960px以上のモニタで適用
 
   ******************************************************************/
+  #fv {
+    background-size: contain;
+  }
 }
 @media (min-width: 1100px) {
   /******************************************************************
@@ -455,42 +950,48 @@ Stylesheet: ベーススタイル
   ******************************************************************/
   header {
     padding: 0 160px;
+    max-width: none;
   }
   #fv {
     background-image: url(/images/fv-pc.png);
     height: 496px;
     padding: 0 158px;
   }
-  #fv h1 {
-    font-size: 36px;
+  .fv-inner {
+    max-width: none;
+  }
+  .fv-inner h1 {
+    font-size: 32px;
     padding-top: 95px;
     margin: 0;
   }
-  #fv h1::after {
+  .fv-inner h1::after {
     left: 0;
-    width: 578px;
+    width: 530px;
   }
-  #fv div {
+  .fv-inner div {
     margin: 110px 0 0;
   }
-  #fv div ul li {
+  .fv-inner div ul li {
     margin-right: 41px;
   }
-  #fv div ul li img {
+  .fv-inner div ul li img {
     width: 130px;
     height: 130px;
+    margin-bottom: 15px;
   }
-  #fv div ul li p {
-    font-size: 20px;
+  .fv-inner div ul li p {
+    font-size: 18px;
   }
   .main_title {
-    font-size: 36px;
+    font-size: 32px;
     margin: 130px 0 35px;
   }
   .sub_title {
     margin: 0 0 90px;
   }
   #service {
+    max-width: none;
     padding: 0 13px;
   }
   #service .main_title {
@@ -516,7 +1017,7 @@ Stylesheet: ベーススタイル
     padding: 45px 20px 0;
   }
   .service_content h2 {
-    font-size: 24px;
+    font-size: 22px;
     margin: 0 0 35px;
   }
   .service_content img {
@@ -532,21 +1033,24 @@ Stylesheet: ベーススタイル
     margin: 80px 0 58px;
   }
   .support_title h1 {
-    font-size: 36px;
+    font-size: 30px;
   }
   .support_img {
-    padding: 0 155px;
+    width: 90%;
+    max-width: 1150px;
+    margin: 0 auto;
   }
   .support_img img {
     width: 480px;
     height: 320px;
   }
   .support_img div {
+    max-width: none;
     width: calc(100% - 480px);
     padding: 18px 0 0 0;
   }
   .support_img div h2 {
-    font-size: 34px;
+    font-size: 30px;
     padding-left: 35px;
   }
   .support_img div h3 {
@@ -555,16 +1059,19 @@ Stylesheet: ベーススタイル
     margin: 25px 0 35px;
   }
   .support_img div p {
-    font-size: 22px;
+    font-size: 18px;
     padding-left: 35px;
   }
   .support_merit {
+    max-width: none;
     padding: 0 115px;
   }
   .support_content {
+    max-width: none;
     padding: 0 115px;
   }
   .support_flow {
+    max-width: none;
     padding: 0 115px;
   }
   .support_time {
@@ -584,7 +1091,7 @@ Stylesheet: ベーススタイル
   }
   .merit-item h2 {
     top: -30px;
-    font-size: 24px;
+    font-size: 22px;
     padding: 19px 0;
     width: 230px;
     border-radius: 30px;
@@ -595,8 +1102,9 @@ Stylesheet: ベーススタイル
     margin: 70px 0;
   }
   .merit-item img {
-    width: 320px;
-    height: 215px;
+    width: 90%;
+    max-width: 320px;
+    height: auto;
     bottom: 20px;
   }
   .sup_items {
@@ -641,7 +1149,8 @@ Stylesheet: ベーススタイル
     padding-bottom: 40px;
   }
   .flow_item {
-    width: 320px;
+    width: 30%;
+    max-width: 320px;
   }
   .flow_item::after {
     top: -30px;
@@ -684,7 +1193,7 @@ Stylesheet: ベーススタイル
     width: 76px;
   }
   .time_content p {
-    font-size: 22px;
+    font-size: 18px;
     font-weight: bold;
     margin: 0;
     position: relative;
@@ -694,7 +1203,7 @@ Stylesheet: ベーススタイル
     content: "\f095";
     position: absolute;
     top: 50%;
-    left: 35px;
+    left: 70px;
     transform: translate(100%, -50%);
     font-weight: 900;
     color: #ff8a00;

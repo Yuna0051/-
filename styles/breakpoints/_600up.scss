@@ -22,6 +22,8 @@ body{
 header{
 	height: 85px;
     width: 100%;
+    margin: 0 auto;
+    max-width: 770px;
 	background-color: #ffffff;
 	display: flex;
 	justify-content: space-between;
@@ -44,13 +46,19 @@ header{
 
 #fv{
 	background-image: url(/images/fv-sp.png);
-	background-position: center center;
+	background-position: center right;
 	background-repeat: no-repeat;
 	background-size: cover;
 	height: 390px;
 	padding: 0 15px;
-
-	h1{
+}
+.fv-inner{
+    width: 100%;
+    max-width: 770px;
+    margin: 0 auto;
+    height: 100%;
+	
+    h1{
 		color: #ff8a00;
 		font-size: 30px;
 		margin: 0 0 0 12px;
@@ -98,7 +106,7 @@ header{
 }
 
 .main_title{
-	font-size: 32px;
+	font-size: 30px;
 	text-align: center;
 	font-weight: bold;
 	margin: 100px 0 30px;
@@ -127,14 +135,17 @@ header{
 }
 
 #service{
-	padding: 0 13px;
+	width: 100%;
+    max-width: 770px;
+    margin: 0 auto;
+    padding: 0 13px;
 
     .main_title{
         margin: 70px 0 30px;
     }
 }
 .service{
-
+    
 	&_items{
 		display: flex;
 		justify-content: space-around;
@@ -155,7 +166,7 @@ header{
 			border-radius: 5px;
 			background-color: #ff8a00;
 			padding: 5px 45px;
-			font-size: 14.4px;
+			font-size: 14px;
             position: relative;
 
             &::after{
@@ -172,14 +183,13 @@ header{
 	}
 	&_content{
 		border: 3px solid #169ee5;
-		//width: 230px;
         width: 80%;
 		height: 330px;
 		margin: 0 auto 20px;
 		padding: 30px 20px 0;
 		
 		h2{
-			font-size: 19.2px;
+			font-size: 18px;
 			color: #ff8a00;
 			font-weight: bold;
 			margin: 0 0 30px;
@@ -191,7 +201,7 @@ header{
 			width: auto;
 		}	
 		p{
-			font-size: 14.4px;
+			font-size: 14px;
 			font-weight: bold;
             margin-top: 30px;
 		}
@@ -213,7 +223,7 @@ header{
 		h1{
 			text-align: center;
 			color: #ffffff;	
-            font-size: 32px;
+            font-size: 30px;
             letter-spacing: 2px;
 		}
 	}
@@ -227,12 +237,15 @@ header{
 			height: 427px;
 		}
 		div{
+            width: 100%;
+            max-width: 770px;
+            margin: 0 auto;
 			padding: 30px 35px 0;
 
 			h2{
 				margin: 0;
 				color: #169ee5;
-				font-size: 30px;
+				font-size: 26px;
                 line-height: 1.3;
 			}
 			h3{
@@ -250,17 +263,26 @@ header{
                 }
 			}
 			p{
-				font-size: 20px;
+				font-size: 18px;
 			}
 		}
 	}
 	&_merit{
+        width: 100%;
+        max-width: 770px;
+        margin: 0 auto;
 		padding: 0 20px;		
 	}
     &_content{
+        width: 100%;
+        max-width: 770px;
+        margin: 0 auto;
         padding: 0 20px;
     }
     &_flow{
+        width: 100%;
+        max-width: 770px;
+        margin: 0 auto;
         padding: 0 20px;
     }
     &_time{
@@ -280,7 +302,6 @@ header{
 	&-item{
 		border: 3px solid #169ee5;
         background-color: #ffffff;
-		//width: 220px;
         width: 31%;
 		height: 270px;
 		position: relative;
@@ -294,7 +315,7 @@ header{
 			text-align: center;
 			color: #ffffff;
 			background-color: #ff8a00;
-			font-size: 15px;
+			font-size: 16px;
             line-height: 1.0;
             letter-spacing: 2px;
             padding: 12px 0;
@@ -304,10 +325,11 @@ header{
 		}
 
         p{
-            font-size: 15px;
+            font-size: 14px;
             padding: 0 25px;
             margin: 40px 0;
-            line-height: 1.2;
+            //line-height: 1.5;
+            font-weight: bold;
         }
 
 		img{
@@ -343,9 +365,10 @@ header{
             height: 120px;
         }
         p{
-            font-size: 18px;
+            font-size: 16px;
             line-height: 1.2;
             margin: 40px 0 0;
+            font-weight: bold;
         }
     }
     &_inner{
@@ -388,7 +411,6 @@ header{
         }
 	}
 	&_item{
-		//width: 220px;
         width: 30%;
 		text-align: center;
         position: relative;
@@ -419,14 +441,13 @@ header{
             content: "3";
         }
         p{
-            font-size: 15px;
+            font-size: 16px;
             padding: 0 25px;
             margin: 18px 0 0;
             line-height: 1.2;
+            font-weight: bold;
         }
 		img{
-			//width: 220px;
-			//height: 150px;
             width: 100%;
             height: auto; 
 		}
@@ -446,7 +467,7 @@ header{
         box-shadow: 0px 0px 5px #333;
 
         h2{
-            font-size: 22px;
+            font-size: 20px;
             font-weight: bold;
             margin: 40px 0 30px;
             line-height: 1.0;
@@ -465,7 +486,7 @@ header{
             }          
         }    
         p{
-            font-size: 22px;
+            font-size: 20px;
             font-weight: bold;
             margin: 0;
             position: relative;
@@ -475,7 +496,7 @@ header{
                 content: '\f095';
                 position: absolute;
                 top: 50%;
-                left: 35px;
+                left: 45px;
                 transform: translate(100%, -50%);
                 font-weight: 900;
                 color: #ff8a00;
