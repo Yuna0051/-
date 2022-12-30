@@ -5,7 +5,7 @@ Stylesheet: 1280px以上のモニタで適用
 ******************************************************************/
 header{
 	padding: 0 160px;
-    max-width: none;
+    max-width: 1280px;
 }
 
 #fv{
@@ -14,7 +14,7 @@ header{
 	padding: 0 158px;
 }
 .fv-inner{
-    max-width: none;
+    max-width: 1280px;
 	h1{
 		font-size: 32px;
 		padding-top: 95px;
@@ -55,7 +55,7 @@ header{
 }
 
 #service{
-    max-width: none;
+    max-width: 1280px;
 	padding: 0 13px;
 
     .main_title{
@@ -117,7 +117,7 @@ header{
 			height: 320px;
 		}
 		div{
-            max-width: none;
+            max-width: 1280px;
             width: calc(100% - 480px);
 			padding: 18px 0 0 0;
 
@@ -137,15 +137,15 @@ header{
 		}
 	}
 	&_merit{
-        max-width: none;
+        max-width: 1280px;
 		padding: 0 115px;		
 	}
     &_content{
-        max-width: none;
+        max-width: 1280px;
         padding: 0 115px;
     }
     &_flow{
-        max-width: none;
+        max-width: 1280px;
         padding: 0 115px;
     }
     &_time{
@@ -192,9 +192,19 @@ header{
 .sup{
     &_items{
         padding: 65px 50px;
+
+        &.sup01{
+            .sup_item{
+                width: 16.66%;
+            }
+        }
+        &.sup02{
+            .sup_item{
+                width: 33.3%;
+            }
+        }
     }
     &_item{
-        width: 16.66%;
         
         &:nth-child(4),&:nth-child(5),&:nth-child(6){
             margin-top: 0;

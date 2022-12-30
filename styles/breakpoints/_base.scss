@@ -40,6 +40,10 @@ header{
 		background-color: #ff8a00;
 		padding: 8px 25px;
         font-size: 14px;
+
+        &:hover{
+            opacity: 0.8;
+        }
 	}
 }
 
@@ -176,7 +180,10 @@ header{
                 font-weight: 900;
                 color: #ffffff;
             }
-		}
+            &:hover{
+                opacity: 0.8;
+            }
+        }
 	}
 	&_content{
 		border: 3px solid #169ee5;
