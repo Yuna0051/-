@@ -3,3 +3,296 @@
 Stylesheet: 1280px以上のモニタで適用
 
 ******************************************************************/
+header{
+	padding: 0 160px;
+}
+
+#fv{
+	background-image: url(/images/fv-pc.png);
+	height: 496px;
+	padding: 0 158px;
+
+	h1{
+		font-size: 36px;
+		padding-top: 95px;
+        margin: 0;
+
+        &::after{
+            left: 0;
+            width: 578px;
+        }
+	}
+
+	div{
+        margin: 110px 0 0;
+
+		ul{			
+			li{
+				margin-right: 41px;
+
+				img{
+					width: 130px;
+					height: 130px;
+				}
+				p{
+					font-size: 20px;
+				}
+			}
+		}
+	}
+}
+
+.main_title{
+	font-size: 36px;
+	margin: 130px 0 35px;
+}
+.sub_title{
+	margin: 0 0 90px;
+}
+
+#service{
+	padding: 0 13px;
+
+    .main_title{
+        margin: 75px 0 30px;
+    }
+}
+.service{
+	&_item{
+		width: 25%;
+
+        &:nth-child(1),&:nth-child(2){
+            margin-bottom: 0;
+        }
+		a{
+			padding: 10px 60px;
+			font-size: 16px;
+
+            &::after{
+                right: 40px;
+            }
+		}
+	}
+	&_content{
+		//width: 230px;
+        width: 90%;
+		height: 410px;
+		margin: 0 auto 25px;
+		padding: 45px 20px 0;
+		
+		h2{
+			font-size: 24px;
+			margin: 0 0 35px;
+		}
+		img{
+			height: 110px;
+		}	
+		p{
+			font-size: 16px;
+            margin-top: 40px;
+		}
+	}
+}
+.support{
+	&_title{
+		background-image: url(/images/sup_back02.png);
+		height: 190px;
+		margin: 80px 0 58px;
+
+		h1{
+            font-size: 36px;
+		}
+	}
+	&_img{
+        padding: 0 155px;
+
+		img{
+			width: 480px;
+			height: 320px;
+		}
+		div{
+            width: calc(100% - 480px);
+			padding: 18px 0 0 0;
+
+			h2{
+				font-size: 34px;
+                padding-left: 35px;
+			}
+			h3{
+				text-align: left;
+				padding: 20px 0 20px 35px;
+                margin: 25px 0 35px;
+			}
+			p{
+				font-size: 22px;
+                padding-left: 35px;
+			}
+		}
+	}
+	&_merit{
+		padding: 0 115px;		
+	}
+    &_content{
+        padding: 0 115px;
+    }
+    &_flow{
+        padding: 0 115px;
+    }
+    &_time{
+        position: relative;
+        background-image: url(/images/sup_back.png);
+        width: 100%;
+        height: 150px;
+        margin: 60px 0 130px;
+    }
+}
+.merit{
+	&-items{
+		display: flex;
+		justify-content: space-around;
+
+	}
+	&-item{
+		//width: 220px;
+        width: 31%;
+		height: 430px;
+
+		h2{
+			top: -30px;
+			font-size: 24px;
+            padding: 19px 0;
+            width: 230px;
+            border-radius: 30px;
+		}
+
+        p{
+            font-size: 18px;
+            padding: 0 43px;
+            margin: 70px 0;
+        }
+
+		img{
+			width: 320px;
+			height: 215px;
+			bottom: 20px;
+		}
+	}
+}
+.sup{
+    &_items{
+        padding: 65px 50px;
+    }
+    &_item{
+        width: 16.66%;
+        
+        &:nth-child(4),&:nth-child(5),&:nth-child(6){
+            margin-top: 0;
+        }
+
+        img{
+            width: auto;
+            height: 100px;
+        }
+        p{
+            margin: 50px 0 0;
+        }
+    }
+    &_inner{
+        height: 300px;
+    
+        p{
+            font-weight: bold;
+            font-size: 18px;
+            margin-top: 60px;
+            line-height: 1.0;
+        }
+    }
+    &_img{
+        margin: 75px 0 0;
+
+        img{
+            width: auto;
+            height: 90px;    
+
+            &:nth-child(2){
+                margin: 0 150px;
+            }
+        }
+    }
+}
+.flow{
+    &_items{
+		justify-content: space-around;
+        
+        span{
+            padding-bottom: 40px;
+        }
+	} 
+	&_item{
+		//width: 220px;
+        width: 320px;
+
+        &::after{
+            top: -30px;
+            font-size: 30px;
+            width: 60px;
+            height: 60px;
+            line-height: 60px;
+        } 
+        p{
+            font-size: 18px;
+        }
+    }
+}
+.time{
+    &_content{
+        width: 530px;
+        height: 170px;
+        margin: 0 auto;
+        text-align: center;
+        background-color: #ffffff;
+        position: absolute;
+        top: 45px;
+        left: 50%;
+        transform: translateX(-50%);
+        box-shadow: 0px 0px 5px #333;
+
+        h2{
+            font-size: 22px;
+            font-weight: bold;
+            margin: 40px 0 30px;
+            line-height: 1.0;
+            letter-spacing: 2px;
+            position: relative;
+            
+            &::after{
+                content: "";
+                position: absolute;
+                bottom: -15px;
+                left: 50%;
+                transform: translateX(-50%);
+                background-color: #ebbd87;
+                height: 2px;
+                width: 76px;
+            }          
+        }    
+        p{
+            font-size: 22px;
+            font-weight: bold;
+            margin: 0;
+            position: relative;
+            
+            &::before{
+                font-family: "Font Awesome 5 Free";
+                content: '\f095';
+                position: absolute;
+                top: 50%;
+                left: 35px;
+                transform: translate(100%, -50%);
+                font-weight: 900;
+                color: #ff8a00;
+            }
+
+        }
+    }
+}
