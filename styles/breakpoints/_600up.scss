@@ -3,6 +3,12 @@
 Stylesheet: 600px以上のタブレットやモニタで適用
 
 ******************************************************************/
+.br-sp{
+    display: none;
+}
+.br-pc{
+    display: block;
+}
 header{
 	height: 85px;
     max-width: 770px;
@@ -16,7 +22,25 @@ header{
         font-size: 14px;
 	}
 }
+footer{
+    .footer_inner{
+        max-width: 750px;
+        margin: 0 auto 30px;
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        align-items: flex-start;
+        text-align: left;
+       
+        div{
+            img{
+                margin: 0 0 30px;
+                height: 33px;
+            }
+        }
+       }
 
+}
 #fv{
 	height: 390px;
 }
@@ -25,7 +49,8 @@ header{
 	
     h1{
 		font-size: 30px;
-		padding-top: 36px;
+		padding-top: 60px;
+        line-height: 1.0;
 
         &::after{
             bottom: -12px;
@@ -35,7 +60,7 @@ header{
 	}
 
 	div{
-        margin: 70px 0 0;
+        margin: 120px 0 0;
 		ul{
 			li{
 				margin-right: 15px;
@@ -161,6 +186,10 @@ header{
         height: 150px;
         margin: 60px 0 130px;
     }
+    &_table{
+        max-width: 770px;
+
+    }
 }
 .merit{
 	&-item{
@@ -201,6 +230,14 @@ header{
 .sup{
     &_items{
         padding: 60px 0;
+       
+        &.sup02{
+            .sup_item{
+                p{
+                    font-size: 16px;
+                }
+            }
+        }
     }
     &_item{
         
@@ -214,6 +251,7 @@ header{
         p{
             font-size: 16px;
             margin: 40px 0 0;
+            text-align: center;
         }
     }
     &_inner{
@@ -240,10 +278,20 @@ header{
     &_items{
 
         span{
+            display: inline;
+            color: #ff8a00;
+            font-weight: 900;
             padding-bottom: 50px;
         }
 	}
 	&_item{
+        width: 30%;
+
+        &:nth-child(3),&:nth-child(5){
+            margin-top: 0;
+        }
+
+
         &::after{
             top: -30px;
             font-size: 25px;
