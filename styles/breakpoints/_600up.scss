@@ -17,7 +17,7 @@ header{
 	img{
 		height: 33px;
 	}
-	a{
+	.BtnProducts{
 		padding: 10px 27px;
         font-size: 14px;
 	}
@@ -331,6 +331,52 @@ footer{
             &::before{
                 left: 45px;
             }
+        }
+    }
+}
+#products{
+    max-width: 770px;
+    padding: 0 13px;
+
+    .main_title{
+        margin: 50px 0 30px;
+    }
+    .sub_title{
+        margin: 0 0 30px;
+    }
+}
+
+.product{	
+	&_item{
+        &:nth-child(1),&:nth-child(2){
+            margin-bottom: 30px;
+        }
+	}
+	&_inner{
+        width: 80%;
+		padding: 30px 20px;
+		
+		h2{
+			font-size: 18px;
+			margin: 0 0 30px;
+		}
+		img{
+			height: 84px;
+            margin-bottom: 30px;
+		}	
+		p{
+			font-size: 14px;
+			font-weight: bold;
+            line-height: 1.5;
+            margin: 0;
+		}
+	}
+    &_btn{
+
+        input{
+            border-radius: 5px;
+            padding: 5px 45px;
+            font-size: 16px;
         }
     }
 }
