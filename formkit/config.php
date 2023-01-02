@@ -8,16 +8,16 @@ namespace FK;
  */
 
 // # - お客様へ
-// $Config['mails'][] = [
-// 	'template'         => 'mail_to_user.php',
-// 	'subject'          => 'お問い合せありがとうございました。',
-// 	'from'             => '事務局 <webmaster@example.jp>',
-// 	'to'               => '{$onamae} 様 <{$email}>',
-// 	'bcc'              => null,
-// 	'reply_to'         => null,
-// 	'is_html'          => false,
-// 	'is_utf8'          => false,
-// 	'attach_upfile'    => false,
+$Config['mails'][] = [
+	'template'         => 'mail_to_user.php',
+	'subject'          => 'お問い合せありがとうございました。',
+	'from'             => '事務局 <myuna0023@gmail.com>',
+	'to'               => '{$onamae} 様 <{$email}>',
+	'bcc'              => null,
+	'reply_to'         => null,
+	'is_html'          => false,
+	'is_utf8'          => false,
+	'attach_upfile'    => false,
 // 	# - SMTP送信設定
 // 	// 'smtp_auth'        => true,
 // 	// 'smtp_host'        => 'smtp.xxxxx',
@@ -28,16 +28,16 @@ namespace FK;
 // ];
 
 // # - 事務局へ
-// $Config['mails'][] = [
-// 	'template'         => 'mail_to_admin.php',
-// 	'subject'          => 'お問い合せがありました。',
-// 	'from'             => '{$onamae} 様 <{$email}>',
-// 	'to'               => '事務局 <webmaster@example.jp>',
-// 	'bcc'              => null,
-// 	'reply_to'         => null,
-// 	'is_html'          => false,
-// 	'is_utf8'          => false,
-// 	'attach_upfile'    => true,
+$Config['mails'][] = [
+	'template'         => 'mail_to_admin.php',
+	'subject'          => 'お問い合せがありました。',
+	'from'             => '{$onamae} 様 <{$email}>',
+	'to'               => '事務局 <myuna0023@gmail.com>',
+	'bcc'              => null,
+	'reply_to'         => null,
+	'is_html'          => false,
+	'is_utf8'          => false,
+	'attach_upfile'    => true,
 // 	# - SMTP送信設定
 // 	// 'smtp_auth'        => true,
 // 	// 'smtp_host'        => 'smtp.xxxxx',
@@ -55,10 +55,7 @@ $Config['validate'] = [
 
 	# - 各要素のバリデート
 	'list' => [
-		'colors'      => REQ() -> ERRORSET('いずれか１つ以上選択してください。'),
-		'colors_text' => REQ('colors','その他') -> ERRORSET('その他の色を入力して下さい。'),
-		'fruit'       => null,
-		'fruit_text'  => REQ('fruit','その他') -> ERRORSET('その他のフルーツを入力して下さい。'),
+		'support'     => REQ() -> ERRORSET('いずれか選択してください。'),
 		'kansou'      => REQ() -> LENGTH(5000),
 		'shimei'      => REQ() -> LENGTH(20),
 		'kana'        => REQ() -> LENGTH(20) -> KATA(),

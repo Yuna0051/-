@@ -6,20 +6,19 @@
 <meta charset="utf-8">
 <link rel="stylesheet" href="formkit/app/fk.css">
 <link rel="stylesheet" href="custom.css">
+<link rel="stylesheet" href="styles/style.css">
 <meta name="viewport" content="width=device-width">
-<title>入力画面(step2) - 複数ページサンプルフォーム - FormKit</title>
+<title>入力画面(お客様情報)</title>
 </head>
 <body>
-
-<!-- ナビリンク -->
-<?php include '../navi.php' ?>
-
-<main>
-	<h1>複数ページサンプルフォーム</h1>
+	<header>
+			<a href="/index.html" class="BtnHome"><img src="/images/クラブペイ.png" alt="クラブペイ"></a>
+	</header>
+	<main>
 	<div class="steps">
-		<span>入力画面(step1)</span> &gt;
-		<span class="now">入力画面(step2)</span> &gt;
-		<span>入力画面(step3)</span> &gt;
+		<span>入力画面(商品選択)</span> &gt;
+		<span class="now">入力画面(お客様情報)</span> &gt;
+		<span>入力画面(お支払い選択)</span> &gt;
 		<span>確認画面</span> &gt;
 		<span>完了画面</span>
 	</div>
@@ -29,11 +28,27 @@
 		<table>
 			<tbody>
 				<tr>
-					<th class="fk-req"><p>ご意見・ご感想</p></th>
+					<th class="fk-req"><p>お名前</p></th>
 					<td>
-						<textarea name="kansou"><?= $kansou ?></textarea>
-						<?= $kansou->marker_tag() ?>
-						<?= $kansou->error_tag() ?>
+						<input type="text" name="shimei" value="<?= $shimei ?>">
+						<?= $shimei->marker_tag() ?>
+						<?= $shimei->error_tag() ?>
+					</td>
+				</tr>
+				<tr>
+					<th class="fk-req"><p>お名前（フリガナ）</p></th>
+					<td>
+						<input type="text" name="kana" value="<?= $kana ?>">
+						<?= $kana->marker_tag() ?>
+						<?= $kana->error_tag() ?>
+					</td>
+				</tr>
+				<tr>
+					<th class="fk-req"><p>同意して下さい。</p></th>
+					<td>
+						<label><input type="checkbox" name="agree" value="同意"<?= $agree->checked('同意') ?>> 同意する</label>
+						<?= $agree->marker_tag() ?>
+						<?= $agree->error_tag() ?>
 					</td>
 				</tr>
 			</tbody>

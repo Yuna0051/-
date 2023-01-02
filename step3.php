@@ -6,8 +6,9 @@
 <meta charset="utf-8">
 <link rel="stylesheet" href="formkit/app/fk.css">
 <link rel="stylesheet" href="custom.css">
+<link rel="stylesheet" href="styles/style.css">
 <meta name="viewport" content="width=device-width">
-<title>入力画面(step3) - 複数ページサンプルフォーム - FormKit</title>
+<title>入力画面(お支払い選択)</title>
 </head>
 <body>
 
@@ -17,9 +18,9 @@
 <main>
 	<h1>複数ページサンプルフォーム</h1>
 	<div class="steps">
-		<span>入力画面(step1)</span> &gt;
-		<span>入力画面(step2)</span> &gt;
-		<span class="now">入力画面(step3)</span> &gt;
+		<span>入力画面(商品選択)</span> &gt;
+		<span>入力画面(お客様情報)</span> &gt;
+		<span class="now">入力画面(お支払い選択)</span> &gt;
 		<span>確認画面</span> &gt;
 		<span>完了画面</span>
 	</div>
