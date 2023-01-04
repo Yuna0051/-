@@ -12,7 +12,7 @@ $Config['mails'][] = [
 	'template'         => 'mail_to_user.php',
 	'subject'          => 'お問い合せありがとうございました。',
 	'from'             => '事務局 <myuna0023@gmail.com>',
-	'to'               => '{$onamae} 様 <{$email}>',
+	'to'               => '{$shimei} 様 <{$email}>',
 	'bcc'              => null,
 	'reply_to'         => null,
 	'is_html'          => false,
@@ -20,10 +20,10 @@ $Config['mails'][] = [
 	'attach_upfile'    => false,
 // 	# - SMTP送信設定
 	// 'smtp_auth'        => true,
-	// 'smtp_host'        => 'sv14141.xserver.jp',
+	// 'smtp_host'        => 'host',
 	// 'smtp_port'        => 587,
-	// 'smtp_user'        => 'my@sample2022.com',
-	// 'smtp_pass'        => 'yuna0523',
+	// 'smtp_user'        => 'user',
+	// 'smtp_pass'        => 'pass',
 	// 'smtp_secure'      => 'tls', # null | 'tls' | 'ssl'
 ];
 
@@ -31,7 +31,7 @@ $Config['mails'][] = [
 $Config['mails'][] = [
 	'template'         => 'mail_to_admin.php',
 	'subject'          => 'お問い合せがありました。',
-	'from'             => '{$onamae} 様 <{$email}>',
+	'from'             => '{$shimei} 様 <{$email}>',
 	'to'               => '事務局 <myuna0023@gmail.com>',
 	'bcc'              => null,
 	'reply_to'         => null,
@@ -40,10 +40,10 @@ $Config['mails'][] = [
 	'attach_upfile'    => true,
 // 	# - SMTP送信設定
 	// 'smtp_auth'        => true,
-	// 'smtp_host'        => 'sv14141.xserver.jp',
+	// 'smtp_host'        => 'host',
 	// 'smtp_port'        => 587,
-	// 'smtp_user'        => 'my@sample2022.com',
-	// 'smtp_pass'        => 'yuna0523',
+	// 'smtp_user'        => 'user',
+	// 'smtp_pass'        => 'pass',
 	// 'smtp_secure'      => 'tls', # null | 'tls' | 'ssl'
 ];
 

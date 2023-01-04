@@ -18,7 +18,7 @@ IPアドレス：<?= $__IP__ ?>
 <?= $kana ?>
 
 ■ メールアドレス
-<?= $email->mail_link_tag() ?>
+<?= $email ?>
 
 ■ 同意して下さい。
 <?= $agree ?>
