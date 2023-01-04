@@ -8,14 +8,17 @@ IPアドレス：<?= $__IP__ ?>
 
 ---------------------------------------
 
-■ 好きな色はなんですか？（複数選択可）
-<?= $colors->join("\n")->indent('  ・') ?><?= $colors_text->wrap('：')->empty_label('') ?>
+■ 商品選択
+<?= $support ?>
 
-■ 好きなフルーツはなんですか？（複数選択可）
-<?= $fruit->join("\n")->indent('  ・') ?><?= $fruit_text->wrap('：')->empty_label('') ?>
+■ お名前
+<?= $shimei ?>
 
-■ ご意見・ご感想
-<?= $kansou->indent('  ') ?>
+■ お名前（フリガナ）
+<?= $kana ?>
+
+■ メールアドレス
+<?= $email->mail_link_tag() ?>
 
 ■ 同意して下さい。
 <?= $agree ?>

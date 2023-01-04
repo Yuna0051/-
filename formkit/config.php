@@ -19,13 +19,13 @@ $Config['mails'][] = [
 	'is_utf8'          => false,
 	'attach_upfile'    => false,
 // 	# - SMTP送信設定
-// 	// 'smtp_auth'        => true,
-// 	// 'smtp_host'        => 'smtp.xxxxx',
-// 	// 'smtp_port'        => 587,
-// 	// 'smtp_user'        => 'xxxxxxxx',
-// 	// 'smtp_pass'        => 'xxxxxxxx',
-// 	// 'smtp_secure'      => 'tls', # null | 'tls' | 'ssl'
-// ];
+	// 'smtp_auth'        => true,
+	// 'smtp_host'        => 'sv14141.xserver.jp',
+	// 'smtp_port'        => 587,
+	// 'smtp_user'        => 'my@sample2022.com',
+	// 'smtp_pass'        => 'yuna0523',
+	// 'smtp_secure'      => 'tls', # null | 'tls' | 'ssl'
+];
 
 // # - 事務局へ
 $Config['mails'][] = [
@@ -39,13 +39,13 @@ $Config['mails'][] = [
 	'is_utf8'          => false,
 	'attach_upfile'    => true,
 // 	# - SMTP送信設定
-// 	// 'smtp_auth'        => true,
-// 	// 'smtp_host'        => 'smtp.xxxxx',
-// 	// 'smtp_port'        => 587,
-// 	// 'smtp_user'        => 'xxxxxxxx',
-// 	// 'smtp_pass'        => 'xxxxxxxx',
-// 	// 'smtp_secure'      => 'tls', # null | 'tls' | 'ssl'
-// ];
+	// 'smtp_auth'        => true,
+	// 'smtp_host'        => 'sv14141.xserver.jp',
+	// 'smtp_port'        => 587,
+	// 'smtp_user'        => 'my@sample2022.com',
+	// 'smtp_pass'        => 'yuna0523',
+	// 'smtp_secure'      => 'tls', # null | 'tls' | 'ssl'
+];
 
 /**
  * バリデート設定
@@ -55,10 +55,11 @@ $Config['validate'] = [
 
 	# - 各要素のバリデート
 	'list' => [
-		'support'     => REQ() -> ERRORSET('いずれか選択してください。'),
-		'kansou'      => REQ() -> LENGTH(5000),
+		'support'     => REQ() -> ERRORSET('いずれか１つ選択してください。'), ITEM('クラブ接続サポート','クラブ駆け付けサポート','クラブメディカル','クラブ保証'),
 		'shimei'      => REQ() -> LENGTH(20),
 		'kana'        => REQ() -> LENGTH(20) -> KATA(),
+		'email'       => EMAIL(),
+		'email2'      => REQ('email') -> ERRORSET('こちらにも入力して下さい。') -> SAME('email'),
 		'agree'       => REQ() -> ERRORSET('先に進むには必ず同意してください。'),
 	],
 
@@ -68,33 +69,6 @@ $Config['validate'] = [
 	# - 全ての要素の最後に実行する共通メソッド
 	'after'  => LENGTH(100), // 標準で最大100文字迄
 ];
-
-/**
- * CSV出力設定
- * -------------------------------------------------------------------------------------------------
- */
-// $Config['csv'] = [
-// 	# - 保存CSVファイル名
-// 	'file' => '../csv/'.(run_date('Y-m')).'.csv.cgi',
-// 	# - 保存先のディレクトリに.htaccessが無ければアクセス禁止のhtaccessを新規作成する。
-// 	'dir_deny' => true,
-// 	# - CSVの内容定義
-// 	'list' => [
-// 		'送信日付'           => '{$__DATE__}', # または run_date('Y-m-d') 等
-// 		'送信時間'           => '{$__TIME__}', # または run_date('H:i:s') 等
-// 	],
-// ];
-
-/**
- * 送信カウント設定
- * -------------------------------------------------------------------------------------------------
- */
-// $Config['count'] = [
-// 	# - 送信カウント値保存ファイル
-// 	'file' => '../count/count.cgi',
-// 	# - 保存先のディレクトリに.htaccessが無ければアクセス禁止のhtaccessを新規作成する。
-// 	'dir_deny' => true,
-// ];
 
 /**
  * オプションURL指定

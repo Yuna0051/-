@@ -5,16 +5,15 @@
 <meta charset="utf-8">
 <link rel="stylesheet" href="formkit/app/fk.css">
 <link rel="stylesheet" href="custom.css">
+<link rel="stylesheet" href="styles/style.css">
 <meta name="viewport" content="width=device-width">
 <title>確認画面 - 複数ページサンプルフォーム - FormKit</title>
 </head>
 <body>
-
-<!-- ナビリンク -->
-<?php include '../navi.php' ?>
-
+<header>
+		<a href="/index.html" class="BtnHome"><img src="/images/クラブペイ.png" alt="クラブペイ"></a>
+</header>
 <main>
-	<h1>複数ページサンプルフォーム</h1>
 	<div class="steps">
 		<span>入力画面(step1)</span> &gt;
 		<span>入力画面(step2)</span> &gt;
@@ -28,21 +27,9 @@
 		<table>
 			<tbody>
 				<tr>
-					<th class="fk-req"><p>好きな色はなんですか？（複数選択可）</p></th>
+					<th class="fk-req"><p>商品選択</p></th>
 					<td>
-						<?= $colors->join("\n") ?><?= $colors_text->wrap('：')->empty_label('') ?>
-					</td>
-				</tr>
-				<tr>
-					<th><p>好きなフルーツはなんですか？（複数選択可）</p></th>
-					<td>
-						<?= $fruit->join("\n") ?><?= $fruit_text->wrap('：')->empty_label('') ?>
-					</td>
-				</tr>
-				<tr>
-					<th class="fk-req"><p>ご意見・ご感想</p></th>
-					<td>
-						<?= $kansou ?>
+						<?= $support ?>
 					</td>
 				</tr>
 				<tr>
@@ -58,6 +45,10 @@
 					</td>
 				</tr>
 				<tr>
+					<th class="fk-req">メールアドレス</th>
+					<td><?= $email->mail_link_tag() ?></td>
+				</tr>
+				<tr>
 					<th class="fk-req"><p>同意して下さい。</p></th>
 					<td>
 						<?= $agree ?>
@@ -70,9 +61,24 @@
 			　　　
 			<button formaction="thanks.php">送信する</button>
 		</div>
-		<aside><?= \FK\copyright_tag(); ?></aside>
+		<aside style="display: none;"><?= \FK\copyright_tag(); ?></aside>
 	</form>
 </main>
+<footer>
+    <div class="footer_inner">
+        <a href="#" style="opacity: 0;">お申し込みはこちら</a>
+        <div>
+            <img src="/images/クラブペイ.png" alt="クラブペイ">
+            <ul>
+                <li>〒100-0000</li>
+                <li>東京都港区浜松町0丁目0番00号</li>
+                <li>000ダイヤビル0F</li>
+                <li>TEL:000-000-0000</li>
+            </ul>
+        </div>
+    </div>
+    <small>&copy; クラブペイ.</small>
+</footer>
 
 <script src="formkit/app/fk.js"></script>
 
