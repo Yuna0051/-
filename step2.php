@@ -25,41 +25,44 @@
 	<noscript>JavaScriptを有効にして下さい。</noscript>
 	<form method="post">
 		<?= \FK\hiddens_tag() ?>
-		<table>
-			<tbody>
-				<tr>
-					<th class="fk-req"><p>お名前</p></th>
-					<td>
-						<input type="text" name="shimei" value="<?= $shimei ?>">
-						<?= $shimei->marker_tag() ?>
-						<?= $shimei->error_tag() ?>
-					</td>
-				</tr>
-				<tr>
-					<th class="fk-req"><p>お名前（フリガナ）</p></th>
-					<td>
-						<input type="text" name="kana" value="<?= $kana ?>">
-						<?= $kana->marker_tag() ?>
-						<?= $kana->error_tag() ?>
-					</td>
-				</tr>
-				<tr>
-					<th class="fk-req"><p>メールアドレス</p></th>
-					<td>
-						<input type="text" name="email" value="<?= $email ?>" data-fk-with="email2">
-						<?= $email->marker_tag() ?>
-						<?= $email->error_tag() ?>
-						<p>確認用に再度入力して下さい。</p>
-						<input type="text" name="email2" value="<?= $email2 ?>" data-fk-with="email">
-						<?= $email2->marker_tag() ?>
-						<?= $email2->error_tag() ?>					
-					</td>
-				</tr>
-			</tbody>
-		</table>
+		<section id="customer">
+			<h1 class="main_title">お客様情報</h1>
+			<h4 class="sub_title">customer</h4>
+			<table>
+				<tbody>
+					<tr>
+						<th class="fk-req"><p>お名前</p></th>
+						<td>
+							<input type="text" name="shimei" value="<?= $shimei ?>">
+							<?= $shimei->marker_tag() ?>
+							<?= $shimei->error_tag() ?>
+						</td>
+					</tr>
+					<tr>
+						<th class="fk-req"><p>お名前（フリガナ）</p></th>
+						<td>
+							<input type="text" name="kana" value="<?= $kana ?>">
+							<?= $kana->marker_tag() ?>
+							<?= $kana->error_tag() ?>
+						</td>
+					</tr>
+					<tr>
+						<th class="fk-req"><p>メールアドレス</p></th>
+						<td>
+							<input type="text" name="email" value="<?= $email ?>" data-fk-with="email2">
+							<?= $email->marker_tag() ?>
+							<?= $email->error_tag() ?>
+							<p>確認用に再度入力して下さい。</p>
+							<input type="text" name="email2" value="<?= $email2 ?>" data-fk-with="email">
+							<?= $email2->marker_tag() ?>
+							<?= $email2->error_tag() ?>					
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</section>
 		<div class="submit">
 			<button formaction="step1.php?revalidate" data-fk-no-validate>前へ</button>
-
 			<button formaction="step3.php">次へ</button>
 		</div>
 		<aside style="display: none;"><?= \FK\copyright_tag(); ?></aside>

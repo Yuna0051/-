@@ -25,18 +25,22 @@
 	<noscript>JavaScriptを有効にして下さい。</noscript>
 	<form method="post">
 		<?= \FK\hiddens_tag() ?>
-		<table>
-			<tbody>
-				<tr>
-					<th class="fk-req"><p>同意して下さい。</p></th>
-					<td>
-						<label><input type="checkbox" name="agree" value="同意"<?= $agree->checked('同意') ?>> 同意する</label>
-						<?= $agree->marker_tag() ?>
-						<?= $agree->error_tag() ?>
-					</td>
-				</tr>
-			</tbody>
-		</table>
+		<section id="payment">
+			<h1 class="main_title">お支払い方法</h1>
+			<h4 class="sub_title">payment</h4>
+			<table>
+				<tbody>
+					<tr>
+						<th class="fk-req"><p>同意して下さい。</p></th>
+						<td>
+							<label><input type="checkbox" name="agree" value="同意"<?= $agree->checked('同意') ?>> 同意する</label>
+							<?= $agree->marker_tag() ?>
+							<?= $agree->error_tag() ?>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</section>
 		<div class="submit">
 			<button formaction="step2.php?revalidate" data-fk-no-validate>前へ</button>
 			<button formaction="check.php">確認画面へ</button>

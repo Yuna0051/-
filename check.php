@@ -15,50 +15,53 @@
 </header>
 <main>
 	<div class="steps">
-		<span>入力画面(step1)</span> &gt;
-		<span>入力画面(step2)</span> &gt;
-		<span>入力画面(step3)</span> &gt;
+		<span>入力画面(商品選択)</span> &gt;
+		<span>入力画面(お客様情報)</span> &gt;
+		<span>入力画面(お支払い方法)</span> &gt;
 		<span class="now">確認画面</span> &gt;
 		<span>完了画面</span>
 	</div>
 	<noscript>JavaScriptを有効にして下さい。</noscript>
 	<form method="post">
 		<?= \FK\hiddens_tag() ?>
-		<table>
-			<tbody>
-				<tr>
-					<th class="fk-req"><p>商品選択</p></th>
-					<td>
-						<?= $support ?>
-					</td>
-				</tr>
-				<tr>
-					<th class="fk-req"><p>お名前</p></th>
-					<td>
-						<?= $shimei ?>
-					</td>
-				</tr>
-				<tr>
-					<th class="fk-req"><p>お名前（フリガナ）</p></th>
-					<td>
-						<?= $kana ?>
-					</td>
-				</tr>
-				<tr>
-					<th class="fk-req">メールアドレス</th>
-					<td><?= $email->mail_link_tag() ?></td>
-				</tr>
-				<tr>
-					<th class="fk-req"><p>同意して下さい。</p></th>
-					<td>
-						<?= $agree ?>
-					</td>
-				</tr>
-			</tbody>
-		</table>
+		<section id="check">
+			<h1 class="main_title">確認画面</h1>
+			<h4 class="sub_title">check</h4>
+			<table>
+				<tbody>
+					<tr>
+						<th class="fk-req"><p>商品選択</p></th>
+						<td>
+							<?= $support ?>
+						</td>
+					</tr>
+					<tr>
+						<th class="fk-req"><p>お名前</p></th>
+						<td>
+							<?= $shimei ?>
+						</td>
+					</tr>
+					<tr>
+						<th class="fk-req"><p>お名前（フリガナ）</p></th>
+						<td>
+							<?= $kana ?>
+						</td>
+					</tr>
+					<tr>
+						<th class="fk-req">メールアドレス</th>
+						<td><?= $email->mail_link_tag() ?></td>
+					</tr>
+					<tr>
+						<th class="fk-req"><p>同意して下さい。</p></th>
+						<td>
+							<?= $agree ?>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</section>
 		<div class="submit">
 			<button formaction="step3.php?revalidate" data-fk-no-validate>前へ</button>
-			　　　
 			<button formaction="thanks.php">送信する</button>
 		</div>
 		<aside style="display: none;"><?= \FK\copyright_tag(); ?></aside>
