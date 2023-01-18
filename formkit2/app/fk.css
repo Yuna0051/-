@@ -1,0 +1,278 @@
+@charset "UTF-8";
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css");
+
+/**
+ * -------------------------------------------------------------------
+ * FormKit standard style.
+ * -------------------------------------------------------------------
+ */
+
+@keyframes bg-color {
+	0% { color: #000; }
+	100% { color: #aaa; }
+}
+@keyframes spin {
+	0% {transform: rotate(0deg);}
+	100% {transform: rotate(360deg);}
+}
+@-webkit-keyframes spin {
+	0% {-webkit-transform: rotate(0deg);}
+	100% {-webkit-transform: rotate(360deg);}
+}
+@-moz-keyframes spin {
+	0% {-moz-transform: rotate(0deg);}
+	100% {-moz-transform: rotate(360deg);}
+}
+@-ms-keyframes spin {
+	0% {-ms-transform: rotate(0deg);}
+	100% {-ms-transform: rotate(360deg);}
+}
+
+/* --- element ok --- */
+input.fk-status-ok,
+select.fk-status-ok,
+textarea.fk-status-ok {
+	background-color: #93c3ff !important;
+}
+
+/* --- element ng --- */
+input.fk-status-ng,
+select.fk-status-ng,
+textarea.fk-status-ng {
+	background-color: #ffa8cf !important;
+}
+	.fk-status-ng input,
+	.fk-status-ng select,
+	.fk-status-ng textarea {
+		background-color: #ffa8cf;
+	}
+
+/* --- element input --- */
+/*
+input.fk-status-input,
+select.fk-status-input,
+textarea.fk-status-input {
+	background-color: #dfff95 !important;
+}
+*/
+
+/* --- element validate --- */
+input.fk-status-validate,
+select.fk-status-validate,
+textarea.fk-status-validate {
+	cursor: wait !important;
+}
+
+/* --- focused input --- */
+textarea:focus ,
+input:focus {
+	background-color: #dfff95 !important;
+}
+
+/* --- exclude element --- */
+input[type=radio] ,
+input[type=checkbox] {
+	background-color: inherit !important;
+}
+
+/* --- error message style --- */
+.fk-error {
+	display: none;
+}
+.fk-error span {
+	display: inline-block;
+	color: white;
+	background: #ff157e;
+	padding: 4px 8px;
+	box-sizing: border-box;
+	font-size: 12px;
+	font-weight: 500;
+	border-radius: 5px;
+	margin-top: 10px;
+	letter-spacing: 0.5px;
+	white-space: initial;
+}
+	.fk-error span::before {
+		content: '';
+		width: 0px;
+		height: 0;
+		display: block;
+		margin-left: 10px;
+		margin-top: -18px;
+		border: solid 5px transparent;
+		border-bottom: solid 10px #ff157e;
+		margin-bottom: 3px;
+	}
+
+/* --- requirement tag style  --- */
+.fk-req {
+	position: relative;
+}
+.fk-req::after {
+	position: absolute;
+	content: '必須';
+	right: 15px;
+	font-size: 12px;
+	background: #ff157e;
+	color: white;
+	padding: 3px 6px;
+	letter-spacing: 1px;
+	border-radius: 3px;
+	top: 50%;
+	margin-top: -12px
+}
+
+/* --- no requirement tag style --- */
+.fk-noreq {
+	position: relative;
+}
+.fk-noreq::after {
+	position: absolute;
+	content: '任意';
+	right: 15px;
+	font-size: 12px;
+	background: #aaa;
+	color: white;
+	padding: 3px 6px;
+	letter-spacing: 1px;
+	border-radius: 3px;
+	top: 50%;
+	margin-top: -12px
+}
+
+/* --- cursor progress --- */
+.fk-cursor-progress {
+	cursor: progress !important;
+}
+
+/* --- marker style --- */
+.fk-marker {
+	padding: 0px 3px;
+	font: normal normal normal 14px/1 FontAwesome;
+}
+	.fk-marker::before {
+		display: inline-block;
+		font-size: 20px;
+		vertical-align: initial;
+		content: '';
+		width: 20px;
+	}
+.fk-marker.fk-status-ok {
+	display: inline-block;
+	color: #157eff;
+	animation: none;
+	-webkit-animation: none;
+	-moz-animation: none;
+	-ms-animation: none;
+}
+	.fk-marker.fk-status-ok::before {
+		content: '\f00c';
+	}
+.fk-marker.fk-status-ng {
+	display: inline-block;
+	color: #ff157e;
+	animation: none;
+	-webkit-animation: none;
+	-moz-animation: none;
+	-ms-animation: none;
+}
+	.fk-marker.fk-status-ng::before {
+		content: '\f00d';
+	}
+.fk-marker.fk-status-input {
+	display: inline-block;
+	color: green;
+	animation: none;
+	-webkit-animation: none;
+	-moz-animation: none;
+	-ms-animation: none;
+}
+	.fk-marker.fk-status-input::before {
+		content: '\f040';
+	}
+.fk-marker.fk-status-validate {
+	display: inline-block;
+	color: #333;
+	animation: spin 1.0s linear infinite;
+	-webkit-animation: spin 1.0s linear infinite;
+	-moz-animation: spin 1.0s linear infinite;
+	-ms-animation: spin 1.0s linear infinite;
+}
+	.fk-marker.fk-status-validate::before {
+		content: '\f110';
+	}
+
+/* --- file control style --- */
+.fk-file-control {
+	border: solid 1px #ccc;
+	padding: 10px;
+	border-radius: 2px;
+	margin: 10px 0;
+	background: #efefef;
+	overflow: hidden;
+}
+.fk-file-control::before {
+	content: 'アップロード済みファイル';
+	display: block;
+	border-bottom: solid #ccc 1px;
+	font-size: 12px;
+	color: #555;
+	padding-bottom: 10px;
+	margin-bottom: 10px;
+}
+.fk-file-control-delete {
+	font-size: 12px;
+	padding: 5px;
+	float: right;
+	margin: 0 !important;
+}
+.fk-file-control-delete::after {
+	content: '削除';
+	color: #555;
+	margin-left: 5px;
+}
+.fk-file-control-delete:hover {
+	cursor: pointer;
+	background-color: #aaa;
+	border-radius: 10px;
+}
+
+.fk-file-control-delete input {
+	vertical-align: middle;
+}
+.fk-preview-image {
+	vertical-align: middle;
+	margin-right: 5px;
+	border: solid 1px #aaa;
+}
+.fk-preview-filename {
+	font-size: 12px;
+}
+
+/* --- misc --- */
+span.fk-error {
+	color: red;
+}
+.fk-empty-label {
+	color: #aaa;
+}
+noscript {
+	color: red;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	text-align: center;
+	background-color: rgba(255,255,255,.9);
+	font-size: 30px;
+	font-weight: bold;
+	position: fixed;
+	overflow: hidden;
+}
+noscript::before {
+	content: '';
+	display: block;
+	width: 0;
+	height: 50%;
+	height: calc(50% - 15px);
+}

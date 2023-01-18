@@ -3,6 +3,7 @@
 <html>
 <head>
 <meta charset="utf-8">
+<meta name="format-detection" content="telephone=no">
 <link rel="stylesheet" href="formkit/app/fk.css">
 <link rel="stylesheet" href="custom.css">
 <link rel="stylesheet" href="styles/style.css">
@@ -17,7 +18,6 @@
 	<div class="steps">
 		<span>入力画面(商品選択)</span> &gt;
 		<span>入力画面(お客様情報)</span> &gt;
-		<span>入力画面(お支払い方法)</span> &gt;
 		<span>確認画面</span> &gt;
 		<span class="now">完了画面</span>
 	</div>
@@ -36,10 +36,10 @@
         <div>
             <img src="/images/クラブペイ.png" alt="クラブペイ">
             <ul>
-                <li>〒100-0000</li>
-                <li>東京都港区浜松町0丁目0番00号</li>
-                <li>000ダイヤビル0F</li>
-                <li>TEL:000-000-0000</li>
+                <li>〒815-0033</li>
+                <li>福岡県福岡市南区大橋1-15-6</li>
+                <li>アルボーレ大橋4F</li>
+                <li>TEL:092-707-1727</li>
             </ul>
         </div>
     </div>

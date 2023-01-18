@@ -1,3 +1,4 @@
+<?php $Config['before_validates'] = 'support,shimei,kana,email,email2,tel,zip,pref,address1,address2,birth_year,birth_month,birth_day' ?>
 <?php require 'formkit/app/fk-check.php' ?>
 <!DOCTYPE html>
 <html>
@@ -7,7 +8,8 @@
 <link rel="stylesheet" href="custom.css">
 <link rel="stylesheet" href="styles/style.css">
 <meta name="viewport" content="width=device-width">
-<title>確認画面 - 複数ページサンプルフォーム - FormKit</title>
+<meta name="format-detection" content="telephone=no">
+<title>確認画面</title>
 </head>
 <body>
 <header>
@@ -17,7 +19,6 @@
 	<div class="steps">
 		<span>入力画面(商品選択)</span> &gt;
 		<span>入力画面(お客様情報)</span> &gt;
-		<span>入力画面(お支払い方法)</span> &gt;
 		<span class="now">確認画面</span> &gt;
 		<span>完了画面</span>
 	</div>
@@ -32,7 +33,7 @@
 					<tr>
 						<th class="fk-req"><p>商品選択</p></th>
 						<td>
-							<?= $support ?>
+							<?= $support->join('、') ?>
 						</td>
 					</tr>
 					<tr>
@@ -42,7 +43,7 @@
 						</td>
 					</tr>
 					<tr>
-						<th class="fk-req"><p>お名前（フリガナ）</p></th>
+						<th class="fk-req"><p>お名前（ふりがな）</p></th>
 						<td>
 							<?= $kana ?>
 						</td>
@@ -52,19 +53,30 @@
 						<td><?= $email->mail_link_tag() ?></td>
 					</tr>
 					<tr>
-						<th class="fk-req"><p>同意して下さい。</p></th>
+						<th class="fk-req">お電話番号</th>
+						<td><?= $tel ?></td>
+					</tr>
+					<tr>
+						<th class="fk-req">ご住所</th>
 						<td>
-							<?= $agree ?>
-						</td>
+							〒：<?= $zip ?><br>
+							都道府県：<?= $pref ?><br>
+							市区町村/番地：<?= $address1 ?><br>
+							建物名/階など：<?= $address2 ?>	
+						</td>				
+					</tr>
+					<tr>
+						<th class="fk-req">生年月日</th>
+						<td><?= $birth_year ?>年 <?= $birth_month ?>月 <?= $birth_day ?>日</td>
 					</tr>
 				</tbody>
 			</table>
 		</section>
 		<div class="submit">
-			<button formaction="step3.php?revalidate" data-fk-no-validate>前へ</button>
+			<button formaction="thanks.php" style="visibility: hidden; width:0; height:0; margin:0;">送信する</button>
+			<button formaction="step2.php?revalidate" data-fk-no-validate class="prev">前へ</button>
 			<button formaction="thanks.php">送信する</button>
 		</div>
-		<aside style="display: none;"><?= \FK\copyright_tag(); ?></aside>
 	</form>
 </main>
 <footer>
@@ -73,10 +85,10 @@
         <div>
             <img src="/images/クラブペイ.png" alt="クラブペイ">
             <ul>
-                <li>〒100-0000</li>
-                <li>東京都港区浜松町0丁目0番00号</li>
-                <li>000ダイヤビル0F</li>
-                <li>TEL:000-000-0000</li>
+				<li>〒815-0033</li>
+                <li>福岡県福岡市南区大橋1-15-6</li>
+                <li>アルボーレ大橋4F</li>
+                <li>TEL:092-707-1727</li>
             </ul>
         </div>
     </div>

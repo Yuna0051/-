@@ -1,37 +1,21 @@
 @charset "UTF-8";
 
-button ,
-.button {
-	border: none;
-	background-color: #ddd;
-	padding: 10px 20px;
-	font-size: 17px;
-	letter-spacing: 1px;
-	border-radius: 3px;
-	color: #333;
-	cursor: pointer;
-	text-decoration: none;
-	display: inline-block;
-}
-button:hover {
-	background-color: #ccc;
-}
 table {
 	border-collapse: collapse;
-	width: 100%;
+	
 }
-	table th ,
-	table td {
-		border: solid 1px #cecece;
-		padding: 10px 15px;
-	}
-	table th {
-		text-align: left;
-		background-color: #f9f9f9;
-		padding-right: 65px;
-		z-index: -1;
-		max-width: 30%;
-	}
+table th ,
+table td {
+	border: solid 1px #cecece;
+	padding: 10px 15px;
+}
+table th {
+	text-align: left;
+	background-color: #f9f9f9;
+	padding-right: 65px;
+	z-index: -1;
+	max-width: 30%;
+}
 aside {
 	text-align: center;
 	padding: 15px 30px 30px 30px;
@@ -44,13 +28,7 @@ input, textarea, select {
 	border-radius: 1px;
 	font-size: 16px;
 }
-input {
-	width: 15em;
-}
-input:not([type=radio]) ,
-input:not([type=checkbox]) {
-	width: auto;
-}
+
 textarea {
 	width: calc(100% - 35px);
 	height: 150px;
@@ -58,32 +36,16 @@ textarea {
 p {
 	margin: 0;
 }
-	p.desc {
-		margin-bottom: 20px;
-	}
-.submit {
-	text-align: center;
-	margin-top: 30px;
+p.desc {
+	margin-bottom: 20px;
 }
+
 .rule {
 	font-weight: normal;
 	font-size: 0.8em;
 	color: #888;
 }
-.steps {
-	text-align: center;
-	padding: 20px 0;
-	font-size: 20px;
-	color: #ddd !important;
-}
-	.steps span {
-		font-size: 20px;
-		font-weight: bold;
-		color: #ddd;
-	}
-		.steps span.now {
-			color: #333 !important;
-		}
+
 
 /**
  * for Mobile (~599px)

@@ -17,7 +17,7 @@ header{
 	img{
 		height: 33px;
 	}
-	.BtnProducts{
+	.BtnProducts,.BtnContact{
 		padding: 10px 27px;
         font-size: 14px;
 	}
@@ -25,6 +25,7 @@ header{
 footer{
     .footer_inner{
         max-width: 750px;
+        padding: 0 15px;
         margin: 0 auto 30px;
         display: flex;
         flex-direction: row-reverse;
@@ -94,7 +95,7 @@ footer{
 
 #service{
     max-width: 770px;
-    padding: 0 13px;
+    padding: 0 13px 80px;
 
     .main_title{
         margin: 70px 0 30px;
@@ -134,10 +135,14 @@ footer{
 	}
 }
 .support{
+    &_item{
+        padding: 0 0 80px;
+    }
+
 	&_title{
 		height: 155px;
 		width: 100%;
-		margin: 80px 0 35px;
+		margin: 0 0 35px;
 
 		h1{
             font-size: 30px;
@@ -334,7 +339,7 @@ footer{
         }
     }
 }
-#products,#customer,#payment,#check,#success{
+#products,#customer,#payment,#check,#success,#contact{
     max-width: 770px;
     padding: 0 13px;
 
@@ -343,6 +348,18 @@ footer{
     }
     .sub_title{
         margin: 0 0 30px;
+    }
+}
+#products .checkAll{
+    margin-bottom: 30px;
+}
+.steps {
+	padding: 20px 10px 0;
+	font-size: 16px;
+}
+.submit{
+    button,input{
+        padding: 5px 45px;
     }
 }
 

@@ -10,8 +10,8 @@ namespace FK;
 // # - お客様へ
 $Config['mails'][] = [
 	'template'         => 'mail_to_user.php',
-	'subject'          => 'お問い合せありがとうございました。',
-	'from'             => '事務局 <myuna0023@gmail.com>',
+	'subject'          => 'お申し込みありがとうございました。',
+	'from'             => '事務局 <support@clubpay.jp>',
 	'to'               => '{$shimei} 様 <{$email}>',
 	'bcc'              => null,
 	'reply_to'         => null,
@@ -27,12 +27,32 @@ $Config['mails'][] = [
 	// 'smtp_secure'      => 'tls', # null | 'tls' | 'ssl'
 ];
 
-// # - 事務局へ
+// # - 事務局1へ
 $Config['mails'][] = [
 	'template'         => 'mail_to_admin.php',
-	'subject'          => 'お問い合せがありました。',
+	'subject'          => 'お申し込みがありました。',
 	'from'             => '{$shimei} 様 <{$email}>',
-	'to'               => '事務局 <myuna0023@gmail.com>',
+	'to'               => '事務局 <support@clubpay.jp>',
+	'bcc'              => null,
+	'reply_to'         => null,
+	'is_html'          => false,
+	'is_utf8'          => false,
+	'attach_upfile'    => true,
+// 	# - SMTP送信設定
+	// 'smtp_auth'        => true,
+	// 'smtp_host'        => 'host',
+	// 'smtp_port'        => 587,
+	// 'smtp_user'        => 'user',
+	// 'smtp_pass'        => 'pass',
+	// 'smtp_secure'      => 'tls', # null | 'tls' | 'ssl'
+];
+
+// # - 事務局2へ
+$Config['mails'][] = [
+	'template'         => 'mail_to_admin.php',
+	'subject'          => 'お申し込みがありました。',
+	'from'             => '{$shimei} 様 <{$email}>',
+	'to'               => '事務局 <clubpay@youhikari.co.jp>',
 	'bcc'              => null,
 	'reply_to'         => null,
 	'is_html'          => false,
@@ -55,12 +75,20 @@ $Config['validate'] = [
 
 	# - 各要素のバリデート
 	'list' => [
-		'support'     => REQ() -> ERRORSET('いずれか１つ選択してください。'), ITEM('クラブ接続サポート','クラブ駆け付けサポート','クラブメディカル','クラブ保証'),
+		'support'     => REQ() -> ERRORSET('１つ以上選択してください。'), ITEM('クラブ接続サポート','クラブ駆け付けサポート','クラブメディカル','クラブ保証'),
 		'shimei'      => REQ() -> LENGTH(20),
-		'kana'        => REQ() -> LENGTH(20) -> KATA(),
-		'email'       => EMAIL(),
+		'kana'        => REQ() -> LENGTH(20) -> HIRA(),
+		'email'       => REQ() -> EMAIL(),
 		'email2'      => REQ('email') -> ERRORSET('こちらにも入力して下さい。') -> SAME('email'),
-		'agree'       => REQ() -> ERRORSET('先に進むには必ず同意してください。'),
+		'tel'         => REQ() -> TEL(),
+		'zip'         => REQ() -> ZIP(),
+		'pref'        => REQ() -> PREF(),
+		'address1'    => REQ() -> LENGTH(1,100),
+		'address2'    => LENGTH(0,100),
+		'birth_year'  => REQ() -> YEAR(),
+		'birth_month' => REQ() -> MONTH(),
+		'birth_day'   => REQ() -> DAY(),
+		'_birthday'   => REQ() -> DATES('birth_year','birth_month','birth_day')
 	],
 
 	# - 全ての要素に最初に実行する共通メソッド

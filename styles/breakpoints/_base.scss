@@ -36,18 +36,23 @@ header{
 		height: 20px;
 		width: auto;
 	}
-	.BtnProducts{
+	.BtnProducts,.BtnContact{
 		text-decoration: none;
 		color: #ffffff;
-		border-radius: 30px;
-		background-color: #ff8a00;
-		padding: 8px 25px;
+		border-radius: 15px;
+		padding: 8px 15px;
         font-size: 14px;
 
         &:hover{
             opacity: 0.8;
         }
 	}
+    .BtnProducts{
+		background-color: #ff8a00;
+    }
+    .BtnContact{
+		background-color: #999;
+    }
 }
 footer{
     background-color: #f6f5f3;
@@ -61,7 +66,7 @@ footer{
         a{
             text-decoration: none;
             color: #ffffff;
-            border-radius: 30px;
+            border-radius: 10px;
             background-color: #ff8a00;
             padding: 8px 25px;
             font-size: 14px;
@@ -190,7 +195,7 @@ footer{
 #service{
 	width: 100%;
     margin: 0 auto;
-    padding: 0 10px;
+    padding: 0 10px 11vw;
 
     .main_title{
         margin: 9.3vw 0 4vw;
@@ -262,6 +267,9 @@ footer{
 	}
 }
 .support{
+    &_item{
+        padding: 0 0 11vw;
+    }
 	&_title{
 		background-image: url(/images/sup_back.png);
 		background-position: center center;
@@ -272,7 +280,7 @@ footer{
 		display: flex;
 		justify-content: center;
 		align-items: center;
-		margin: 11vw 0 4.6vw;
+		margin: 0 0 4.6vw;
 
 		h1{
 			text-align: center;
@@ -587,7 +595,7 @@ footer{
         }
     }
 }
-#products,#customer,#payment,#check,#success{
+#products,#customer,#payment,#check,#success,#contact{
 	width: 100%;
     margin: 0 auto;
     padding: 0 10px;
@@ -595,7 +603,88 @@ footer{
     .main_title{
         margin: 9.3vw 0 4vw;
     }
+
+    table{
+        width: 100%;
+        max-width: 770px;
+        margin: 0 auto;
+    }
 }
+#products .checkAll{
+    text-align: center;
+    margin-bottom: 6.6vw;
+
+    input{
+        text-decoration: none;
+        color: #ffffff;
+        border: none;
+        border-radius: 5px;
+        background-color: #ff8a00;
+        padding: 5px 0;
+        width: 80px;
+        font-size: 14px;
+        position: relative;
+        cursor: pointer;
+        display: inline-block;
+        margin: 0 10px;
+
+        &:hover{
+            opacity: 0.8;
+        }
+    }
+}
+#customer input{
+    width: 90%;
+}
+#contact input{
+    width: 90%;
+}
+#success p{
+    font-size: 16px;
+    margin: 50px 0;
+    text-align: center;
+}
+.steps {
+	text-align: center;
+	padding: 9.3vw 10px 0;
+	font-size: 14px;
+	color: #ddd !important;
+}
+.steps span {
+	font-weight: bold;
+}
+.steps span.now {
+	color: #333 !important;
+}
+.submit{
+    margin-top: 20px;
+    text-align: center;
+
+    button,input{
+        text-decoration: none;
+        color: #ffffff;
+        border: none;
+        border-radius: 5px;
+        background-color: #ff8a00;
+        padding: 5px 0;
+        font-size: 14px;
+        position: relative;
+        cursor: pointer;
+        display: inline-block;
+        margin: 0 10px;
+        width: 130px;
+
+        &.prev{
+            background-color: #999;
+        }
+
+        &:hover{
+            opacity: 0.8;
+        }
+    }
+}
+
+
 .product{
 	display: flex;
 	justify-content: space-around;
@@ -608,15 +697,20 @@ footer{
         &:nth-child(1),&:nth-child(2){
             margin-bottom: 7vw;
         }
+		a{
+			font-size: 14px;
+		}
 
         input{
             cursor: pointer;
+            width: 16px;
+            height: 16px;
         }
 	}
 	&_inner{
 		border: 3px solid #169ee5;
         width: 95%;
-		margin: 0 auto 20px;
+		margin: 0 auto 10px;
 		padding: 4vw 10px;
 		
 		h2{
