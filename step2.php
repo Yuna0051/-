@@ -61,9 +61,12 @@
 					<tr>
 						<th class="fk-req"><p>お電話番号</p></th>
 						<td>
-							<input type="text" name="tel" value="<?= $tel ?>">
-							<?= $tel->marker_tag() ?>
-							<?= $tel->error_tag() ?>						
+							<input type="tel" name="tel1" value="<?= $tel1 ?>"> -
+							<input type="tel" name="tel2" value="<?= $tel2 ?>"> -
+							<input type="tel" name="tel3" value="<?= $tel3 ?>">
+							<!-- width:28% -->
+							<?= $tel3->marker_tag() ?>
+							<?= $tel3->error_tag() ?>						
 						</td>
 					</tr>
 					<tr>
@@ -116,10 +119,11 @@
         <div>
             <img src="/images/クラブペイ.png" alt="クラブペイ">
             <ul>
-				<li>〒815-0033</li>
+                <li>〒815-0033</li>
                 <li>福岡県福岡市南区大橋1-15-6</li>
                 <li>アルボーレ大橋4F</li>
-                <li>TEL:092-707-1727</li>
+                <li>TEL:0120-959-303</li>
+                <li>対応時間:平日11〜18時</li>
             </ul>
         </div>
     </div>

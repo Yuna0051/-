@@ -11,7 +11,7 @@ namespace FK;
 $Config['mails'][] = [
 	'template'         => 'mail_to_user.php',
 	'subject'          => 'お申し込みありがとうございました。',
-	'from'             => '事務局 <support@clubpay.jp>',
+	'from'             => '事務局 <clubpay@youhikari.co.jp>',
 	'to'               => '{$shimei} 様 <{$email}>',
 	'bcc'              => null,
 	'reply_to'         => null,
@@ -32,7 +32,7 @@ $Config['mails'][] = [
 	'template'         => 'mail_to_admin.php',
 	'subject'          => 'お申し込みがありました。',
 	'from'             => '{$shimei} 様 <{$email}>',
-	'to'               => '事務局 <support@clubpay.jp>',
+	'to'               => '事務局 <clubpay.entry@gmail.com>',
 	'bcc'              => null,
 	'reply_to'         => null,
 	'is_html'          => false,
@@ -75,12 +75,15 @@ $Config['validate'] = [
 
 	# - 各要素のバリデート
 	'list' => [
-		'support'     => REQ() -> ERRORSET('１つ以上選択してください。'), ITEM('クラブ接続サポート','クラブ駆け付けサポート','クラブメディカル','クラブ保証'),
+		'support'     => REQ() -> ERRORSET('１つ以上選択してください。'), ITEM('クラブ接続サポート','クラブ駆け付けサポート','クラブガード','クラブ保証'),
+		'privacy'     => REQ() -> ERRORSET('同意してください。'),
 		'shimei'      => REQ() -> LENGTH(20),
 		'kana'        => REQ() -> LENGTH(20) -> HIRA(),
 		'email'       => REQ() -> EMAIL(),
 		'email2'      => REQ('email') -> ERRORSET('こちらにも入力して下さい。') -> SAME('email'),
-		'tel'         => REQ() -> TEL(),
+		'tel1'         => REQ() -> LENGTH(3,3),
+		'tel2'         => REQ() -> LENGTH(4,4),
+		'tel3'         => REQ() -> LENGTH(4,4) -> ERRORSET('11文字で入力してください。'),
 		'zip'         => REQ() -> ZIP(),
 		'pref'        => REQ() -> PREF(),
 		'address1'    => REQ() -> LENGTH(1,100),

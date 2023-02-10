@@ -39,7 +39,7 @@
                         <h2>クラブ接続<br>サポート</h2>
                         <img src="/images/service01.png" alt="クラブ接続サポート">                
                         <p>770円<span>(税込)/月</span></p>
-                        <p>(1ヶ月無料)</p>
+                        <p>(最大2ヶ月無料)</p>
                     </div>
                     <a href="download/support1.pdf" download>約款PDF</a>
                 </div>
@@ -48,18 +48,18 @@
                     <div class="product_inner">
                         <h2>クラブ駆け付け<br>サポート</h2>
                         <img src="/images/service02.png" alt="クラブ駆け付けサポート">                
-                        <p>770円<span>(税込)/月</span></p>
-                        <p>(1ヶ月無料)</p>
+                        <p>660円<span>(税込)/月</span></p>
+                        <p>(最大2ヶ月無料)</p>
                     </div>    
                     <a href="download/support2.pdf" download>約款PDF</a>
                 </div>
                 <div class="product_item">
-                    <input type="checkbox" name="support[]" value="クラブメディカル<?= $support->checked('クラブメディカル') ?>">
+                    <input type="checkbox" name="support[]" value="クラブガード<?= $support->checked('クラブガード') ?>">
                     <div class="product_inner">
-                        <h2>クラブ<br>メディカル</h2>
-                        <img src="/images/service03.png" alt="クラブメディカル">               
+                        <h2>クラブガード<br>&nbsp;</h2>
+                        <img src="/images/service03.png" alt="クラブガード">               
                         <p>770円<span>(税込)/月</span></p>
-                        <p>(1ヶ月無料)</p>
+                        <p>(最大2ヶ月無料)</p>
                     </div>
                     <a href="download/support3.pdf" download>約款PDF</a>
                 </div>
@@ -69,13 +69,17 @@
                         <h2>クラブ保証<br>&nbsp;</h2>
                         <img src="/images/service04.png" alt="クラブ保証">                
                         <p>770円<span>(税込)/月</span></p>
-                        <p>(1ヶ月無料)</p>
+                        <p>(最大2ヶ月無料)</p>
                     </div>    
                     <a href="download/support4.pdf" download>約款PDF</a>
                </div>
            </div>
 		   <?= $support->error_tag() ?>
         </section>
+        <div class="privacy_check">
+            <label><input type="checkbox" name="privacy" ?>　個人情報取扱の内容を確認した上で同意します。<a href="download/privacypolicy.pdf">個人情報の取扱についてを表示</a></label><br>
+            <?= $privacy->error_tag() ?>
+        </div>
 		<div class="submit">
             <button>次へ</button>
 		</div>
@@ -90,7 +94,8 @@
                 <li>〒815-0033</li>
                 <li>福岡県福岡市南区大橋1-15-6</li>
                 <li>アルボーレ大橋4F</li>
-                <li>TEL:092-707-1727</li>
+                <li>TEL:0120-959-303</li>
+                <li>対応時間:平日11〜18時</li>
             </ul>
         </div>
     </div>

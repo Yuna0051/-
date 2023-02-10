@@ -12,7 +12,7 @@
 <?= $email ?>
 
 ■ お電話番号
-<?= $tel ?>
+<?= $tel1 ?>-<?= $tel2 ?>-<?= $tel3 ?>
 
 ■生年月日
 <?= $birth_year ?>年 <?= $birth_month ?>月 <?= $birth_day ?>日

@@ -424,6 +424,7 @@ footer small {
 .sup_inner p {
   font-weight: bold;
   font-size: 14px;
+  margin: 14px 0 25px;
 }
 .sup_img {
   display: flex;
@@ -446,6 +447,21 @@ footer small {
 }
 .flow_items span {
   display: none;
+}
+.flow_inner {
+  width: 100%;
+  text-align: center;
+}
+.flow_inner p {
+  font-size: 14px;
+  padding: 0;
+  margin: 2.4vw 0 0;
+  line-height: 1.2;
+  font-weight: bold;
+}
+.flow_inner img {
+  width: 70%;
+  height: auto;
 }
 .flow_item {
   width: 100%;
@@ -577,9 +593,15 @@ footer small {
 #customer input {
   width: 90%;
 }
+#customer input[type=tel] {
+  width: 27%;
+}
 
 #contact input {
   width: 90%;
+}
+#contact input[type=tel] {
+  width: 27%;
 }
 
 #success p {
@@ -645,8 +667,8 @@ footer small {
 }
 .product_item input {
   cursor: pointer;
-  width: 16px;
-  height: 16px;
+  width: 17px;
+  height: 17px;
 }
 .product_inner {
   border: 3px solid #169ee5;
@@ -687,6 +709,16 @@ footer small {
 }
 .product_btn input:hover {
   opacity: 0.8;
+}
+
+.privacy_check {
+  margin: 30px 0;
+  text-align: center;
+}
+.privacy_check input {
+  cursor: pointer;
+  width: 17px;
+  height: 17px;
 }
 
 @media (min-width: 480px) {
@@ -908,7 +940,7 @@ footer small {
     text-align: center;
   }
   .sup_inner {
-    height: 240px;
+    height: 280px;
   }
   .sup_inner p {
     font-size: 18px;
@@ -928,6 +960,18 @@ footer small {
     color: #ff8a00;
     font-weight: 900;
     padding-bottom: 50px;
+  }
+  .flow_inner {
+    width: 100%;
+    text-align: center;
+  }
+  .flow_inner p {
+    font-size: 16px;
+    padding: 0 25px;
+    margin: 18px 0 0;
+  }
+  .flow_inner img {
+    width: 50%;
   }
   .flow_item {
     width: 30%;
@@ -1222,13 +1266,12 @@ footer small {
     margin: 50px 0 0;
   }
   .sup_inner {
-    height: 300px;
+    height: 330px;
   }
   .sup_inner p {
     font-weight: bold;
     font-size: 18px;
     margin-top: 60px;
-    line-height: 1;
   }
   .sup_img {
     margin: 75px 0 0;
@@ -1245,6 +1288,16 @@ footer small {
   }
   .flow_items span {
     padding-bottom: 40px;
+  }
+  .flow_inner {
+    width: 30%;
+    text-align: center;
+  }
+  .flow_inner p {
+    font-size: 18px;
+  }
+  .flow_inner img {
+    width: 100%;
   }
   .flow_item {
     width: 30%;

@@ -231,13 +231,13 @@ footer{
         }
     }
     &_inner{
-        height: 300px;
+        height: 330px;
     
         p{
             font-weight: bold;
             font-size: 18px;
             margin-top: 60px;
-            line-height: 1.0;
+            //line-height: 1.0;
         }
     }
     &_img{
@@ -261,6 +261,18 @@ footer{
             padding-bottom: 40px;
         }
 	} 
+    &_inner{
+        width: 30%;
+        text-align: center;
+        
+        p{
+            font-size: 18px;
+        }
+        img{
+            width: 100%;
+        }
+    }
+
 	&_item{
         width: 30%;
         max-width: 320px;

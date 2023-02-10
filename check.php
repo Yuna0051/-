@@ -1,4 +1,4 @@
-<?php $Config['before_validates'] = 'support,shimei,kana,email,email2,tel,zip,pref,address1,address2,birth_year,birth_month,birth_day' ?>
+<?php $Config['before_validates'] = 'support,shimei,kana,email,email2,tel1,tel2,tel3,zip,pref,address1,address2,birth_year,birth_month,birth_day' ?>
 <?php require 'formkit/app/fk-check.php' ?>
 <!DOCTYPE html>
 <html>
@@ -54,7 +54,7 @@
 					</tr>
 					<tr>
 						<th class="fk-req">お電話番号</th>
-						<td><?= $tel ?></td>
+						<td><?= $tel1 ?>-<?= $tel2 ?>-<?= $tel3 ?></td>
 					</tr>
 					<tr>
 						<th class="fk-req">ご住所</th>
@@ -85,10 +85,11 @@
         <div>
             <img src="/images/クラブペイ.png" alt="クラブペイ">
             <ul>
-				<li>〒815-0033</li>
+                <li>〒815-0033</li>
                 <li>福岡県福岡市南区大橋1-15-6</li>
                 <li>アルボーレ大橋4F</li>
-                <li>TEL:092-707-1727</li>
+                <li>TEL:0120-959-303</li>
+                <li>対応時間:平日11〜18時</li>
             </ul>
         </div>
     </div>

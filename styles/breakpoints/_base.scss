@@ -465,6 +465,7 @@ footer{
         p{
             font-weight: bold;
             font-size: 14px;
+            margin: 14px 0 25px;
         }
     }
     &_img{
@@ -491,11 +492,25 @@ footer{
 
         span{
             display: none;
-            //color: #ff8a00;
-            //font-weight: 900;
-            //padding-bottom: 7vw;
         }
 	}
+    &_inner{
+        width: 100%;
+        text-align: center;
+        
+        p{
+            font-size: 14px;
+            padding: 0;
+            margin: 2.4vw 0 0;
+            line-height: 1.2;
+            font-weight: bold;
+        }
+		img{
+            width: 70%;
+            height: auto; 
+		}
+
+    }
 	&_item{
         width: 100%;
 		text-align: center;
@@ -635,9 +650,17 @@ footer{
 }
 #customer input{
     width: 90%;
+
+    &[type="tel"] {
+        width: 27%;
+    }
 }
 #contact input{
     width: 90%;
+   
+    &[type="tel"] {
+        width: 27%;
+    }    
 }
 #success p{
     font-size: 16px;
@@ -703,8 +726,8 @@ footer{
 
         input{
             cursor: pointer;
-            width: 16px;
-            height: 16px;
+            width: 17px;
+            height: 17px;
         }
 	}
 	&_inner{
@@ -749,5 +772,15 @@ footer{
                 opacity: 0.8;
             }    
         }
+    }
+}
+
+.privacy_check{
+    margin: 30px 0;
+    text-align: center;
+    input{
+        cursor: pointer;
+        width: 17px;
+        height: 17px;
     }
 }
